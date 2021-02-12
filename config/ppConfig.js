@@ -1,7 +1,7 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const db = require('../models');
-const crypt_lib = require('./cryptolib')
+const crypt_lib = require('../cryptolib')
 
 /*
  * Passport "serializes" objects to make them easy to store, converting the
