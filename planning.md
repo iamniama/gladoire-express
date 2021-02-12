@@ -52,11 +52,11 @@ Multi-user (with multiple access levels) journal application (posts are private 
 
 ## User Stories <a name="userstories"></a>
 - ### As a Gladoire user, ISBAT:
-  - [ ] View all PUBLIC entries without signup or auth
-  - [ ] View all SHARED entries with signup/auth
-  - [ ] View a privacy policy without authenticating or creating an account
-  - [ ] View Terms of Service wihout authenticating or creating an account
-  - [ ] View some information about the site without authenticating or creating an account
+  - [ ] View all PUBLIC entries *without* signup or auth
+  - [ ] View all SHARED entries *with* signup/auth
+  - [ ] View a privacy policy *without* authenticating or creating an account
+  - [ ] View Terms of Service *wihout* authenticating or creating an account
+  - [ ] View some information about the site *without* authenticating or creating an account
     - [ ] and maybe some information on meditation and cacao as well
   - [ ] View one or more FAQs
   - [ ] Create an account that I will use to authenticate to the app
@@ -67,8 +67,9 @@ Multi-user (with multiple access levels) journal application (posts are private 
   - [ ] Create a record of a practice session with notes and relevant information to the session, 
     - [ ] as well as enhancers like music, cacao, cannabis, etc
     - [ ] and decide how widely I want to share the record
+    - [ ] and trust that only I can see my private entries (outside of direct DB access)
   - [ ] See all my previous entries
-    - [ ] and edit them (including changing sharing status
+    - [ ] and edit them (including changing sharing status)
     - [ ] and delete them
   - [ ] see all existing categories and items for enhancers
     - [ ] and edit them if I am a category moderator
