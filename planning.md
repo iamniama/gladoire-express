@@ -11,4 +11,3 @@
 
 ### New Item Form Layout
 ![](Gladoire-newitem_layout.png)
-
