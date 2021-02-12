@@ -6,7 +6,7 @@
 ## Wireframes
 
 ### Main Layout
-![](Gladoire-mainlayout.png) 
+![](Gladoire-mainlayout2.png) 
 (Updated)
 
 ### New Item Form Layout
