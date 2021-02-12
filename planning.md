@@ -10,6 +10,7 @@
     2. [Content Moderator](#conmod)
     3. [Admin User](#admin)
 5. [Draft Route Diagram](#routes)
+6. [Future State Plans](#future)
 
 
 ## What It Is - Raw <a name="intro"></a>
@@ -37,7 +38,7 @@ Multi-user (with multiple access levels) journal application (posts are private 
 - Future state notion: commenting on non-private posts
 
 # Gladoire Planning
-
+While the idea was inspired by the 21 Grams project, the design is largely new, particularly in the way items in a session are handled.  Gladoire is much more flexible in that (including music, incense, and so on), whereas 21 Grams was just cacao and cannabis specifically, each in their own tables.
 ## ERD <a name="ERD"></a>
 ![](Gladoire-ERD002-Draft.png)
 
@@ -94,5 +95,11 @@ Multi-user (with multiple access levels) journal application (posts are private 
   - [ ] reset the password of a user (random password sent via email, just like the user level reset)
   - [ ] edit user access levels
   
- ## Design: Routes
+ ## Design: Routes <a name="routes"></a>
  ![](Gladoire-Design-routes.png)
+ 
+ ## Future State Plans
+ - give users their own category items, instead of having one big public list of stuff that everybody shares
+ - allow experienced users to create categories
+    - possibly private ones, such as those associted with ngondro, crossing the abyss, or other highly sacred/secret practices
+ - maybe some categories should only be listed privately
