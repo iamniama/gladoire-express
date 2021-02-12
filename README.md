@@ -9,9 +9,12 @@ That was what 21 Grams was really about...a USEFUL journal of practice, a better
 
 
 ## GA Notes 
-The technical emphases in this project are more complex routes, and a more complex data design (multiple users, multiple access levels, private/not private posts, etc), because these are the things that I had some trouble with in the unit.
-I will also be using at least one external API (to get weather at time of session, and possibly phase of the moon, a lot of people who would dig this app care about that stuff)
-From a design perspective:
+The technical emphases in this project are
+- more complex routes, 
+- and a more complex data design (multiple users, multiple access levels, private/not private posts, etc), because these are the things that I had some trouble with in the unit.
+- I will also be using at least one external API (to get weather at time of session, and possibly phase of the moon, a lot of people who would dig this app care about that stuff)
+
+### From a design perspective:
 Multi-user (with multiple access levels) journal application (posts are private by default, but can be marked for sharing.  depending on time, I may have multiple sharing levels, such as public posts, and posts that can only be seen by authenticated users) with an emphasis on meditation and spiritual practices.
 Level 1 users will be able to post, and select from various categories, but will not be able to add category items (cacao, practices, etc).
 Level 2 users will have Level 1 access plus the ability to add category items (but not categories!).  If I have time, I would like to do them as category moderators, such that a given Level 2 user might be able to manage cacao, while another could manage cacao AND practices.  That's the goal, but I won't be too unhappy if I have to fall back to all categories.
