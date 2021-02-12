@@ -73,6 +73,8 @@ While the idea was inspired by the 21 Grams project, the design is largely new, 
     - [ ] and trust that only I can see my private entries (outside of direct DB access)
   - [ ] See all my previous entries
     - [ ] and edit them (including changing sharing status)
+    - [ ] and selecy by date range
+    - [ ] and sort by criteria (entries with category item, entries where metrics changed notably pre/post)
     - [ ] and delete them
   - [ ] see all existing categories and items for enhancers
     - [ ] and edit them if I am a category moderator
