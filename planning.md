@@ -1,14 +1,14 @@
 # Table of contents
 1. [What it is](#intro)
-  1. [GA Notes](#ganotes)
+    1. [GA Notes](#ganotes)
 2. [ERD](#erd)
 3. [Wireframes](#wireframes)
-  1. [Main Layout](#mainlayout)
-  2. [New Item](#newitem)
+    1. [Main Layout](#mainlayout)
+    2. [New Item](#newitem)
 4. [User Stories Main](#userstories)
-  1. [Category Moderator](#catmod)
-  2. [Content Moderator](#conmod)
-  3. [Admin User](#admin)
+    1. [Category Moderator](#catmod)
+    2. [Content Moderator](#conmod)
+    3. [Admin User](#admin)
 
 
 ## What It Is - Raw <a name="intro"></a>
