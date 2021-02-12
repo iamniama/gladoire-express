@@ -43,13 +43,13 @@
   - [ ] Edit individual items
   - [ ] Create new items
  
- - ### As a Gladoire content moderator, ISBAT:
+- ### As a Gladoire content moderator, ISBAT:
   - [ ] do all category moderator stuff
   - [ ] View all public and shared entries (with auth and priv)
   - [ ] mark an entry as 'struck', which hides it from everyone but the author
   - [ ] mark a user as 'muted', which prevents them from creating shared or public entries
   
- - ### As a Gladoire admin, ISBAT:
+- ### As a Gladoire admin, ISBAT:
   - [ ] do all content moderator stuff
   - [ ] view all users
   - [ ] reset the password of a user (random password sent via email, just like the user level reset)
