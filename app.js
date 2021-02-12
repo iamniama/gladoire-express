@@ -40,7 +40,7 @@ app.use((req, res, next) => {
     res.locals.currentUser = req.user;
     next();
   });
-
+app.use('/', require('./routes/info'))
 app.use('/auth', require('./routes/auth'))
 app.use('/categories', require('./routes/categories'))
 app.use('/entries', require('./routes/entries'))
@@ -51,9 +51,7 @@ app.use('/mod', require('./routes/mod'))
 
 
 
-app.get('/', (req, res) => {
-    res.render('index') 
-});
+
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
