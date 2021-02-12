@@ -8,4 +8,6 @@
 ### Main Layout
 ![](Gladoire-mainlayout.png)
 
+### New Item Form Layout
+![](Gladoire-newitem_layout.png)
 
