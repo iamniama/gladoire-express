@@ -14,7 +14,7 @@
 
 
 ## User Stories
-- As a Gladoire user, ISBAT:
+- #### As a Gladoire user, ISBAT:
   - [ ] View all PUBLIC entries without signup or auth
   - [ ] View all SHARED entries with signup/auth
   - [ ] View a privacy policy without authenticating or creating an account
@@ -36,20 +36,20 @@
   - [ ] see all existing categories and items for enhancers
     - [ ] and edit them if I am a category moderator
   
-- As a Gladoire category moderator, ISBAT:
+- #### As a Gladoire category moderator, ISBAT:
   - [ ] do all regular user stuff
   - [ ] View all items in the categoy/ies that I have access to (or all categories)
     - [ ] and reflect that in the ERD if it gets implemented
   - [ ] Edit individual items
   - [ ] Create new items
  
- - As a Gladoire content moderator, ISBAT:
+ - #### As a Gladoire content moderator, ISBAT:
   - [ ] do all category moderator stuff
   - [ ] View all public and shared entries (with auth and priv)
   - [ ] mark an entry as 'struck', which hides it from everyone but the author
   - [ ] mark a user as 'muted', which prevents them from creating shared or public entries
   
- - As a Gladoire admin, ISBAT:
+ - #### As a Gladoire admin, ISBAT:
   - [ ] do all content moderator stuff
   - [ ] view all users
   - [ ] reset the password of a user (random password sent via email, just like the user level reset)
