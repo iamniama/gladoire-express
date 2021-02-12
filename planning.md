@@ -41,16 +41,16 @@ Multi-user (with multiple access levels) journal application (posts are private 
 # Gladoire Planning
 While the idea was inspired by the 21 Grams project, the design is largely new, particularly in the way items in a session are handled.  Gladoire is much more flexible in that (including music, incense, and so on), whereas 21 Grams was just cacao and cannabis specifically, each in their own tables.
 ## ERD <a name="ERD"></a>
-![](Gladoire-ERD002-Draft.png)
+![](d_rsrc/Gladoire-ERD002-Draft.png)
 
 ## Wireframes <a name="wireframes"></a>
 
 ### Main Layout <a name="mainlayout"></a>
-![](Gladoire-mainlayout2.png) 
+![](d_rsrc/Gladoire-mainlayout2.png) 
 (Updated)
 
 ### New Item Form Layout <a name="newitem"></a>
-![](Gladoire-newitem_layout.png)
+![](d_rsrc/Gladoire-newitem_layout.png)
 
 
 ## User Stories <a name="userstories"></a>
@@ -100,7 +100,7 @@ While the idea was inspired by the 21 Grams project, the design is largely new, 
   - [ ] edit user access levels
   
  ## Design: Routes <a name="routes"></a>
- ![](Gladoire-Design-routes.png)
+ ![](d_rsrc/Gladoire-Design-routes.png)
  
  ## Future State Plans <a name="future"></a>
  - give users their own category items, instead of having one big public list of stuff that everybody shares
