@@ -9,6 +9,7 @@
     1. [Category Moderator](#catmod)
     2. [Content Moderator](#conmod)
     3. [Admin User](#admin)
+5. [Draft Route Diagram](#routes)
 
 
 ## What It Is - Raw <a name="intro"></a>
@@ -92,3 +93,6 @@ Multi-user (with multiple access levels) journal application (posts are private 
   - [ ] view all users
   - [ ] reset the password of a user (random password sent via email, just like the user level reset)
   - [ ] edit user access levels
+  
+ ## Design: Routes
+ ![](Gladoire-Design-routes.png)
