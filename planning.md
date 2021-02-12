@@ -1,1 +1,11 @@
-# PLANS FOR WORLD DOMINATION GO HERE
+# Gladoire Planning
+
+## ERD
+![](Gladoire-ERD001-Draft.png)
+
+## Wireframes
+
+### Main Layout
+![](Gladoire-mainlayout.png)
+
+
