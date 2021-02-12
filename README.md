@@ -5,7 +5,7 @@ Gladoire is a journaling app for meditators and spiritual practitioners
 Gladoire is an Express web application for tracking one's experiences in meditation and other spiritual practices.
 The idea started as *'21 Grams'*, a tracker for cacao and cannabis pairings, named primarily for the (in my experience) optimal meditative dose of cacao, but also from a scientist's theory about the weight of the human soul [Wikipedia](https://en.wikipedia.org/wiki/21_grams_experiment) in the early 20th century.
 In my spiritual tradition, one's journal became a sort of personal grimoire, but I've never had much use for it.  I lose them, I forget to write in them, and even a good template for Evernote doesn't let me see trends, or compare experiences between different executions of a practice.
-That was what 21 Grams was really about...a USEFUL journal of practice, a better grimoire, but since meditation should be a joyful thing, and magick as such isn't much of a thing, let's call it a GLADoire. (rimshot)
+That was what 21 Grams was really about...a USEFUL journal of practice, a better grimoire, but since meditation should be a joyful thing, let's call it a GLADoire. (rimshot)
 
 
 ## GA Notes 
