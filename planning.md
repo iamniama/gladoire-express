@@ -98,7 +98,7 @@ While the idea was inspired by the 21 Grams project, the design is largely new, 
  ## Design: Routes <a name="routes"></a>
  ![](Gladoire-Design-routes.png)
  
- ## Future State Plans
+ ## Future State Plans <a name="future"></a>
  - give users their own category items, instead of having one big public list of stuff that everybody shares
  - allow experienced users to create categories
     - possibly private ones, such as those associted with ngondro, crossing the abyss, or other highly sacred/secret practices
