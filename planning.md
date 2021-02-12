@@ -1,3 +1,4 @@
+<a name="top"></a>
 # Table of contents
 1. [What it is](#intro)
     1. [GA Notes](#ganotes)
@@ -103,3 +104,17 @@ While the idea was inspired by the 21 Grams project, the design is largely new, 
  - allow experienced users to create categories
     - possibly private ones, such as those associted with ngondro, crossing the abyss, or other highly sacred/secret practices
  - maybe some categories should only be listed privately
+
+[TOP](#top)
+1. [What it is](#intro)
+    1. [GA Notes](#ganotes)
+2. [ERD](#erd)
+3. [Wireframes](#wireframes)
+    1. [Main Layout](#mainlayout)
+    2. [New Item](#newitem)
+4. [User Stories Main](#userstories)
+    1. [Category Moderator](#catmod)
+    2. [Content Moderator](#conmod)
+    3. [Admin User](#admin)
+5. [Draft Route Diagram](#routes)
+6. [Future State Plans](#future)
