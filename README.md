@@ -16,11 +16,13 @@ The technical emphases in this project are
 
 ### From a design perspective:
 Multi-user (with multiple access levels) journal application (posts are private by default, but can be marked for sharing.  depending on time, I may have multiple sharing levels, such as public posts, and posts that can only be seen by authenticated users) with an emphasis on meditation and spiritual practices.
-Level 1 users will be able to post, and select from various categories, but will not be able to add category items (cacao, practices, etc).
-Level 2 users will have Level 1 access plus the ability to add category items (but not categories!).  If I have time, I would like to do them as category moderators, such that a given Level 2 user might be able to manage cacao, while another could manage cacao AND practices.  That's the goal, but I won't be too unhappy if I have to fall back to all categories.
-Level 3 users will have Level 1 and 2 access (all categories either way) plus the ability to moderate/remove posts.
-Level 4 users will have all previous rights, plus the ability to grant rights, given time.  This might fall back to level 3 users depending on LoE.
-Future state notion: auto-promote users from 1 to 2 based on certain activity level
-Future state notion: commenting on non-private posts
+
+- Level 1 users will be able to post, and select from various categories, but will not be able to add category items (cacao, practices, etc).
+- Level 2 users will have Level 1 access plus the ability to add category items (but not categories!).  
+  - If I have time, I would like to do them as category moderators, such that a given Level 2 user might be able to manage cacao, while another could manage cacao AND practices.  That's the goal, but I won't be too unhappy if I have to fall back to all categories.
+- Level 3 users will have Level 1 and 2 access (all categories either way) plus the ability to moderate/remove posts.
+- Level 4 users will have all previous rights, plus the ability to grant rights, given time.  This might fall back to level 3 users depending on LoE.
+- Future state notion: auto-promote users from 1 to 2 based on certain activity level
+- Future state notion: commenting on non-private posts
  
 
