@@ -88,10 +88,11 @@ While the idea was inspired by the 21 Grams project, the design is largely new, 
   - [ ] do all category moderator stuff
   - [ ] View all public and shared entries (with auth and priv)
   - [ ] mark an entry as 'struck', which hides it from everyone but the author
-  - [ ] mark a user as 'muted', which prevents them from creating shared or public entries
+
   
 - ### As a Gladoire admin, ISBAT: <a name="admin"></a>
   - [ ] do all content moderator stuff
+  - [ ] mark a user as 'muted', which prevents them from creating shared or public entries
   - [ ] view all users
   - [ ] reset the password of a user (random password sent via email, just like the user level reset)
   - [ ] edit user access levels
