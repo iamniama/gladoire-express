@@ -1,7 +1,7 @@
 # Gladoire Planning
 
 ## ERD
-![](Gladoire-ERD001-Draft.png)
+![](Gladoire-ERD002-Draft.png)
 
 ## Wireframes
 
