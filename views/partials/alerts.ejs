@@ -1,0 +1,10 @@
+<% if (typeof alerts != 'undefined' && alerts.error) { %>
+    <% alerts.error.forEach(msg => { %>
+        <div class="alert alert-error"><%= msg %></div>
+    <% }); %>
+<% } %>
+<% if (typeof alerts != 'undefined' && alerts.success) { %>
+    <% alerts.success.forEach(msg => { %>
+        <div class="alert alert-success"><%= msg %></div>
+    <% }); %>
+<% } %>

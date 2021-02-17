@@ -1,0 +1,71 @@
+body {
+    background-color: darkseagreen;
+
+}
+
+#rtwrapper {
+    width: 80%;
+    background-color:beige;
+}
+
+#editor {
+    background-color: antiquewhite;
+}
+
+big-input {
+    position: relative;
+    width: 90%;
+}
+.demo {
+    border: 1px solid black;
+}
+
+nav{
+    background-image: url(https://res.cloudinary.com/sidrat/image/upload/v1612567585/samples/landscapes/landscape-panorama.jpg);
+    background-color: palegreen;
+}
+
+.flash-alert{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.form-wrapper{
+    width: 40%;
+    margin-left: 2%;
+    background-color:tan;
+    padding: 5px;
+}
+
+.tan {
+    background-color:tan;
+    margin-left: 20px;
+    border-top-left-radius:10%;
+    border-top-right-radius:5%;
+    border-bottom-right-radius:20%;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+.green {
+    background-color:darkseagreen;
+    margin-left: 20px;
+    border-top-left-radius:10%;
+    border-top-right-radius:5%;
+    border-bottom-right-radius:20%;
+    padding: 5px;
+    margin-bottom: 8px;
+}
+.grn-header {
+    background-color: palegreen;
+    text-align: center;
+    width: 20rem;
+    border-radius: 15%;
+}
+
+input {
+    margin-bottom: 5px;
+}
+textarea {
+    margin-bottom: 5px;
+}

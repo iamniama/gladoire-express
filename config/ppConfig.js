@@ -1,62 +1,49 @@
+
+
+// TODO: Update DB stuff in ppConfig to reflect the new User model
+// TODO: Test the auth with the new model before continuing dev
+
+require('dotenv').config();
+const db=require('../models')
 const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
-const db = require('../models');
-const crypt_lib = require('../cryptolib')
+let GoogleStrategy = require( 'passport-google-oauth2' ).Strategy;
 
-/*
- * Passport "serializes" objects to make them easy to store, converting the
- * user to an identifier (id)
- */
-passport.serializeUser((user, cb) => {
-  cb(null, user.id);
+
+passport.serializeUser((user, done) => {
+  done(null, user.id);
 });
 
-/*
- * Passport "deserializes" objects by taking the user's serialization (id)
- * and looking it up in the database
- */
-passport.deserializeUser((id, cb) => {
+passport.deserializeUser((id, done) => {
   db.user.findByPk(id).then(user => {
-    cb(null, user);
-  }).catch(cb);
+    done(null, user);
+  });
 });
 
-/*
- * This is Passport's strategy to provide local authentication. We provide the
- * following information to the LocalStrategy:
- *
- * Configuration: An object of data to identify our authentication fields, the
- * username and password
- *
- * Callback function: A function that's called to log the user in. We can pass
- * the email and password to a database query, and return the appropriate
- * information in the callback. Think of "cb" as a function that'll later look
- * like this:
- *
- * login(error, user) {
- *   // do stuff
- * }
- *
- * We need to provide the error as the first argument, and the user as the
- * second argument. We can provide "null" if there's no error, or "false" if
- * there's no user.
- */
+passport.use(
+    new GoogleStrategy({
+      clientID: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      callbackURL: 'http://localhost:3000/auth/google/callback'
+    }, (accessToken, refreshToken, profile, done) => {
+      // passport callback function
+      //check if user already exists in our db with the given profile ID
+      db.user.findOne({where:{googleId: profile.id}}).then((currentUser)=>{
+        if(currentUser){
+          //if we already have a record with the given profile ID
+          done(null, currentUser);
+        } else{
+          //if not, create a new user
+          new db.user({
+            googleId: profile.id,
+            user_level: 1,
+            user_name: profile.displayName,
+          }).save().then((newUser) =>{
+            done(null, newUser);
+          });
+        }
+      })
+    })
+);
 
 
-passport.use(new LocalStrategy({
-  usernameField: 'email',
-  passwordField: 'password'
-}, (email, password, cb) => {
-  db.user.findOne({ 
-    where: { email }
-  }).then(user => {
-    if (!user || !crypt_lib.validatePassword(password, user)) {
-      cb(null, false);
-    } else {
-      cb(null, user);
-    }
-  }).catch(cb);
-}));
-
-// export the Passport configuration from this module
 module.exports = passport;
