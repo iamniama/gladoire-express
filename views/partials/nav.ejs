@@ -1,20 +1,23 @@
+<%//TODO: shuffle the navbar up a bit.  entries, then enhancers, then mod, then TOS.
+//TODO: also, find a new background for the love of Night%>
+
+
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
            <span class="logo"> <a class="navbar-brand" href="/#">GLADOIRE</a></span>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="/">HOME</a></li>
+            <li class="lead"><a href="/">HOME</a></li>
             <% if (typeof data.user != 'undefined') { %>
-                <li><a href="/auth/logout">Logout</a></li>
-                <li><a href="/protected2">PRIVATE</a></li>
-            <% } else { %>
-                <li><a href="/auth/google/">Signup Or Login with Google</a></li>
-
-
-            <%}%>
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/terms">Terms of Service</a></li>
+                <li class="lead"><a href="/auth/logout">Logout</a></li>
+                <li class="lead"><a href="/protected2">PRIVATE</a></li>
+            <% } %>
+            <li class="lead"><a href="/privacy">Privacy Policy</a></li>
+            <li class="lead"><a href="/terms">Terms of Service</a></li>
         </ul>
+        <%if (typeof data.user == 'undefined') {%>
+        <a href="/auth/google/"><img src="/img/btn_google_signin_dark_normal_web.png"></a>
+        <%}%>
     </div>
 </nav>

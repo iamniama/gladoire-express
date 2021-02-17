@@ -44,21 +44,14 @@ app.use((req, res, next) => {
   });
 
 app.get('/', (req, res)=>{
-    //res.send(`Welcome to Gladoire. <a href="http://localhost:3000/protected">Normal Auth Protected Link<a> <br /><a href="http://localhost:3000/protected2">Super Auth Protected Link<a>`)
     res.render('index', {data:{user: req.user}})
 })
 
 app.get('/privacy', (req, res)=>{
-    //res.sendFile('Privacy-policy-v2-gladoire.pdf')
-    //res.sendFile(path.join(__dirname, '../public', 'Privacy-policy-v2-gladoire.pdf'))
-    //res.sendFile('Privacy-policy-v2-gladoire.pdf', { root: path.join(__dirname, '../public') });
     res.redirect('/Privacy-policy-v2-gladoire.pdf')
 })
 
 app.get('/terms', (req, res)=>{
-    //res.sendFile('Terms-of-service-gladoire.pdf')
-    //res.sendFile(path.join(__dirname, '../public', 'Terms-of-service-gladoire.pdf'));
-    //res.sendFile('Terms-of-service-gladoire.pdf', { root: path.join(__dirname, '../public') });
     res.redirect('/Terms-of-service-gladoire.pdf')
 })
 
