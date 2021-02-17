@@ -13,7 +13,7 @@ const isLoggedIn = require('../middleware/isLoggedIn');
 
 
 router.get('/', (req, res) => {
-    res.render('index') 
+    res.render('info/index', {data:{user: req.user}})
 });
 
 router.get('/privacy', async(req, res)=>{

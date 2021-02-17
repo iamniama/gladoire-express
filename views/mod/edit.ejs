@@ -5,23 +5,20 @@
 
 
         <form action="/mod/info?_method=PUT" method="POST" id="test">
-            <input type="hidden" name="id" value="<%=data.item.id%>">
-            <label for="info_title">TITLE: </label>
-            <input type="text" name="info_title" id="info_title" class="big-input" size="50"value="<%=data.item.info_title%>" required />
+            <input type="hidden" value="<%=data.item.id%>">
+            <label for="doc_name">NAME: </label>
+            <input type="text" name="doc_name" id="doc_name" class="big-input" size="50" minlength="6" value="<%=data.item.doc_name%>" required/>
             <br />
-            <label for="info_summary">SUMMARY: </label>
-            <input type="text" name="info_summary" id="info_summary" class="big-input" size="50" value="<%=data.item.info_summary%>" required />
+            <label for="doc_url">LINK: </label>
+            <input type="text" name="doc_url" id="soc_url" class="big-input" size="50" minlength="6" value="<%=data.item.doc_url%>" required/>
             <br />
-            <label for="info_body">BODY:</label>
-            <textarea name="info_body" id="info_body"><%=data.item.info_body%></textarea>
+            <label for="doc_desc">DESCRIPTION: </label>
+            <input type="text" name="doc_desc" id="doc_desc" class="big-input" size="50" minlength="6" value="<%=data.item.doc_desc%>" required/>
+            <br />
             <input type="submit" class="btn btn-primary local-btn" value="UPDATE">
 
         </form>
-    <script>
-        tinymce.init({
-            selector: '#info_body'
-        });
-    </script>
+
 
     <%}%>
 </div>

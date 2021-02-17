@@ -47,12 +47,12 @@ app.get('/', (req, res)=>{
     res.render('index', {data:{user: req.user}})
 })
 
-app.get('/privacy', (req, res)=>{
-    res.redirect('/Privacy-policy-v2-gladoire.pdf')
+app.get('/privacy', async(req, res)=>{
+    res.render('info/index', {data:{user: req.user, item: await db.doc.findOne({where:{doc_name: 'Privacy Policy'}})}})
 })
 
-app.get('/terms', (req, res)=>{
-    res.redirect('/Terms-of-service-gladoire.pdf')
+app.get('/terms', async(req, res)=>{
+    res.render('info/index', {data:{user: req.user, item: await db.doc.findOne({where:{doc_name: 'Terms of Service'}})}})
 })
 
 
@@ -62,7 +62,7 @@ app.get('/terms', (req, res)=>{
 app.use('/auth', require('./routes/auth'))
 //app.use('/categories', require('./routes/categories'))
 //app.use('/entries', require('./routes/entries'))
-//app.use('/info', require('./routes/info'))
+app.use('/info', require('./routes/info'))
 app.use('/mod', require('./routes/mod'))
 
 

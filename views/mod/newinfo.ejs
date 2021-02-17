@@ -5,33 +5,19 @@
 
 
     <form action="/mod/info" method="POST" id="test">
-        <label for="info_title">TITLE: </label>
-        <input type="text" name="info_title" id="info_title" class="big-input" size="50" minlength="6" maxlength="100" required/>
+        <label for="doc_name">NAME: </label>
+        <input type="text" name="doc_name" id="doc_name" class="big-input" size="50" minlength="6" required/>
         <br />
-        <label for="info_summary">SUMMARY: </label>
-        <input type="text" name="info_summary" id="info_summary" class="big-input" size="50" minlength="6" required/>
+        <label for="doc_url">LINK: </label>
+        <input type="text" name="doc_url" id="doc_url" class="big-input" size="50" minlength="6" required/>
         <br />
-        <label for="info_body">BODY:</label>
-        <textarea name="info_body" id="info_body"></textarea>
+        <label for="doc_desc">DESCRIPTION: </label>
+        <input type="text" name="doc_desc" id="doc_desc" class="big-input" size="50" minlength="6" required/>
+        <br />
         <input type="submit" class="btn btn-primary local-btn" value="ADD">
 
     </form>
-        <script>
-            tinymce.init({
-                selector: '#info_body'
-            });
-        </script>
 
-        <!--<script>
-        let quill = new Quill('#editor', {theme: 'snow'})
-        $("#test").on("submit",function(){
-            let hvalue = $('.ql-editor').html();
-            let dvalue = JSON.stringify(quill.getContents())
-            $(this).append("<textarea name='info_body' style='display:none'>"+hvalue+"</textarea>");
-            $(this).append("<textarea name='info_delta' style='display:none'>"+dvalue+"</textarea>");
-        })
-    </script>
-    -->
         <%}%>
 
 

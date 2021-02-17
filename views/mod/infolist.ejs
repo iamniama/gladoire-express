@@ -4,8 +4,8 @@
     <% data.items.forEach(function(item){ %>
         <div class="card" style="width:55rem;">
             <div class="card-body blue">
-                <h3><a href="/mod/info/<%=item.id%>"><%=item.info_title %></a></h3>
-                <p class="card-text"><%=item.info_summary%></p>
+                <h3><a href="/mod/info/<%=item.id%>"><%=item.doc_name %></a></h3>
+                <p class="card-text"><%=item.doc_desc%></p>
             </div>
         </div>
     <%})%>

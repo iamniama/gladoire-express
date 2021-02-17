@@ -15,7 +15,7 @@ router.get('/', isLoggedIn, (req, res)=>{
 
 router.get('/info', isLoggedIn, async(req,res)=>{
     if (req.user.user_level >= 5){
-        res.render('mod/infolist', {data:{user: req.user, items:await db.info.findAll()}})
+        res.render('mod/infolist', {data:{user: req.user, items:await db.doc.findAll()}})
     }
 })
 
@@ -27,7 +27,7 @@ router.get('/info/new', isLoggedIn, async(req,res)=>{
 
 router.post('/info', isLoggedIn, async(req, res)=>{
     if (req.user.user_level >= 5) {
-        db.info.create(req.body)
+        db.doc.create(req.body)
         res.redirect('/mod/info/')
     }
 })
@@ -35,7 +35,7 @@ router.post('/info', isLoggedIn, async(req, res)=>{
 
 router.get('/info/:id', isLoggedIn, async(req, res)=>{
     if (req.user.user_level >= 5) {
-        res.render('mod/edit', {data: {user: req.user, item: await db.info.findOne({where:{'id': req.params.id}})}})
+        res.render('mod/edit', {data: {user: req.user, item: await db.doc.findOne({where:{'id': req.params.id}})}})
     }else{
         res.redirect(redirSite)
     }
@@ -46,7 +46,7 @@ router.get('/info/:id', isLoggedIn, async(req, res)=>{
 router.put('/info', isLoggedIn, async(req,res)=>{
     if (req.user.user_level >= 5){
         console.log(req.body)
-        db.info.update({info_body: req.body.info_body, info_title: req.body.info_title, info_summary: req.body.info_summary}, { where: {id: req.body.id}})
+        db.doc.update({doc_name: req.body.doc_name, doc_url: req.body.doc_url}, { where: {id: req.body.id}})
         res.redirect(`/mod/info/${req.body.id}`)
     }
 })
