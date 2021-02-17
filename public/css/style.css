@@ -12,6 +12,13 @@ body {
     background-color: antiquewhite;
 }
 
+.logofont {
+    font-family: "Brush Script MT";
+    color: black;
+    font-weight: bolder;
+    font-size: 32px;
+}
+
 big-input {
     position: relative;
     width: 90%;
