@@ -6,20 +6,21 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-           <span class="logofont"> <a href="/#">GLADOIRE</a></span>
+           <a href="/#"><span class="logofont">Gladoire</span></a>
         </div>
-        <ul class="nav navbar-nav">
-            <li class="lead"><a href="/">HOME</a></li>
+        <ul class="nav navbar-nav logofont">
+            <li class="logofont"><a href="/">HOME</a></li>
             <% if (typeof data.user != 'undefined') { %>
-                <li class="lead"><a href="/auth/logout">Logout</a></li>
-                <li class="lead"><a href="/protected2">PRIVATE</a></li>
+                <li class="logofont"><a href="/auth/logout">LOGOUT</a></li>
+                <li class="logofont"><a href="/protected2">PRIVATE</a></li>
             <% } %>
-            <li class="lead"><a href="/privacy">Privacy Policy</a></li>
-            <li class="lead"><a href="/terms">Terms of Service</a></li>
+            <li class="logofont smaller"><a href="/privacy">Privacy Policy</a></li>
+            <li class="logofont smaller"><a href="/terms">Terms of Service</a></li>
         </ul>
 
     </div>
-    <%if (typeof data.user == 'undefined') {%>
-        <a href="/auth/google/" class="top-right"><img src="/img/btn_google_signin_dark_normal_web.png"></a>
-    <%}%>
+
 </nav>
+<%if (typeof data.user == 'undefined') {%>
+    <a href="/auth/google/" class="top-right"><img src="/img/btn_google_signin_dark_normal_web.png"></a>
+<%}%>

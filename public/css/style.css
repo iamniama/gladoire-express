@@ -1,6 +1,22 @@
-body {
-    background-color: darkseagreen;
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
+body {
+    background: url('/img/paper3.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+
+}
+.dyno {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #rtwrapper {
@@ -13,10 +29,14 @@ body {
 }
 
 .logofont {
-    font-family: "Brush Script MT";
+    font-family: 'Shadows Into Light', cursive;
     color: black;
     font-weight: bolder;
-    font-size: 32px;
+    font-size: 30px;
+}
+
+.smaller {
+    font-size: 24px;
 }
 
 big-input {
@@ -28,8 +48,8 @@ big-input {
 }
 
 nav{
-    background-image: url(https://res.cloudinary.com/sidrat/image/upload/v1612567585/samples/landscapes/landscape-panorama.jpg);
-    background-color: palegreen;
+    background-color: azure;
+    opacity: 0.3;
 }
 
 .flash-alert{
