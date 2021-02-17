@@ -46,11 +46,13 @@ app.get('/', (req, res)=>{
     res.render('index', {data:{user: req.user}})
 })
 
-app.use('/', require('./routes/info'))
+
+
+//app.use('/', require('./routes/info'))
 app.use('/auth', require('./routes/auth'))
-app.use('/categories', require('./routes/categories'))
-app.use('/entries', require('./routes/entries'))
-app.use('/info', require('./routes/info'))
+//app.use('/categories', require('./routes/categories'))
+//app.use('/entries', require('./routes/entries'))
+//app.use('/info', require('./routes/info'))
 app.use('/mod', require('./routes/mod'))
 
 

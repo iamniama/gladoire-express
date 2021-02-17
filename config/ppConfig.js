@@ -35,7 +35,8 @@ passport.use(
           //if not, create a new user
           new db.user({
             googleId: profile.id,
-            user_level: 1,
+            user_level: 0,
+            user_email: profile.email,
             user_name: profile.displayName,
           }).save().then((newUser) =>{
             done(null, newUser);

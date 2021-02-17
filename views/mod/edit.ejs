@@ -1,0 +1,28 @@
+<div style="width:60%;">
+
+    <% if (typeof data.user != 'undefined' && data.user.user_level >= 5) { %>
+
+
+
+        <form action="/mod/info?_method=PUT" method="POST" id="test">
+            <input type="hidden" name="id" value="<%=data.item.id%>">
+            <label for="info_title">TITLE: </label>
+            <input type="text" name="info_title" id="info_title" class="big-input" size="50"value="<%=data.item.info_title%>" required />
+            <br />
+            <label for="info_summary">SUMMARY: </label>
+            <input type="text" name="info_summary" id="info_summary" class="big-input" size="50" value="<%=data.item.info_summary%>" required />
+            <br />
+            <label for="info_body">BODY:</label>
+            <textarea name="info_body" id="info_body"><%=data.item.info_body%></textarea>
+            <input type="submit" class="btn btn-primary local-btn" value="UPDATE">
+
+        </form>
+    <script>
+        tinymce.init({
+            selector: '#info_body'
+        });
+    </script>
+
+    <%}%>
+</div>
+
