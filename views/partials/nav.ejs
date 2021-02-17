@@ -17,8 +17,9 @@
             <li class="lead"><a href="/privacy">Privacy Policy</a></li>
             <li class="lead"><a href="/terms">Terms of Service</a></li>
         </ul>
-        <%if (typeof data.user == 'undefined') {%>
-        <a href="/auth/google/"><img src="/img/btn_google_signin_dark_normal_web.png"></a>
-        <%}%>
+
     </div>
+    <%if (typeof data.user == 'undefined') {%>
+        <a href="/auth/google/" class="top-right"><img src="/img/btn_google_signin_dark_normal_web.png"></a>
+    <%}%>
 </nav>
