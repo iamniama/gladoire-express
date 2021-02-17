@@ -1,19 +1,9 @@
 <div style="width:60%;">
-    <form action="/" method="POST" id="test">
-        <label for="field1">Field 1: </label>
-        <input type="text" name="field1" id="field1" class="big-input" size="6" minlength="4" maxlength="4" pattern="[A-Za-z]{4}" title="4 alpha character code" required/>
-        <br />
-        <label for="rtwrapper">Field 2:</label>
-        <div id="rtwrapper" name="rtwrapper">
-            <div id="editor" name="editor">Sample <b>text</b></div>
-        </div>
-        <input type="submit" class="btn btn-primary local-btn" value="GOOOOO">
 
-    </form>
     <br />
     <br />
     <div style="font-weight: 600; color: darkgreen" id="EVERYONE" class="demo">
-        Everyone can see this bit
+        Everyone can see this bit, which will display when there is something to display
     </div>
     <br />
     <% if (typeof data.user != 'undefined') { %>
@@ -26,13 +16,6 @@
         <div style="color: red;font-weight: bolder;" id="LEVEL3ONLY" class="demo"><h3>SECRET SQUIRREL STUFF</h3></div>
 
     <%}%>
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-    <script>
-        let quill = new Quill('#editor', {theme: 'snow'})
-        $("#test").on("submit",function(){
-            var hvalue = $('.ql-editor').html();
-            $(this).append("<textarea name='richText' style='display:none'>"+hvalue+"</textarea>");
-        })
-    </script>
+
 
 </div>
