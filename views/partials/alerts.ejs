@@ -1,10 +1,10 @@
 <% if (typeof alerts != 'undefined' && alerts.error) { %>
     <% alerts.error.forEach(msg => { %>
-        <div class="alert alert-error"><%= msg %></div>
+        <div class="alert alert-danger logofont smaller"><%= msg %></div>
     <% }); %>
 <% } %>
 <% if (typeof alerts != 'undefined' && alerts.success) { %>
     <% alerts.success.forEach(msg => { %>
-        <div class="alert alert-success"><%= msg %></div>
+        <div class="alert alert-info logofont smaller"><%= msg %></div>
     <% }); %>
 <% } %>

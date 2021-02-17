@@ -3,7 +3,7 @@
 <% if (typeof data.user != 'undefined' && data.user.user_level >= 5) { %>
     <% data.items.forEach(function(item){ %>
         <div class="card" style="width:55rem;">
-            <div class="card-body tan">
+            <div class="card-body blue">
                 <h3><a href="/mod/info/<%=item.id%>"><%=item.info_title %></a></h3>
                 <p class="card-text"><%=item.info_summary%></p>
             </div>

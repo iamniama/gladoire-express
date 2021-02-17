@@ -48,9 +48,15 @@ big-input {
 }
 
 nav{
-    background-color: azure;
-    opacity: 0.3;
+    background-color: rgba(187, 233, 247, 0.4);
+
 }
+
+nav div {
+    background-color: rgba(187, 233, 247, 0.4);
+}
+
+
 
 .flash-alert{
     position: fixed;
@@ -80,6 +86,21 @@ nav{
     padding: 8px;
     margin-bottom: 8px;
 }
+
+.blue {
+    background-color: rgba(187, 233, 247, 0.4);
+    margin-left: 20px;
+    border-top-left-radius:10%;
+    border-top-right-radius:5%;
+    border-bottom-right-radius:20%;
+    border-bottom-left-radius: 1%;
+    padding: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .green {
     background-color:darkseagreen;
     margin-left: 20px;
