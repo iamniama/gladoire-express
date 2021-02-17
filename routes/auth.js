@@ -40,4 +40,12 @@ router.get('/google/failure', (req, res) => {
     )
 })
 
+router.get('/profile', isLoggedIn, (req, res)=>{
+    res.send('Users will edit their profile information here.')
+})
+
+router.put('/profile', isLoggedIn, (req, res)=>{
+    res.send(req.body)
+})
+
 module.exports = router
