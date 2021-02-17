@@ -23,6 +23,8 @@ app.use(methodOverride('_method'));
 app.use(express.static(__dirname + '/public/'));
 app.use(require('morgan')('dev'));
 const db=require('./models')
+//const path = require("ejs");
+const path = require('path');
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
@@ -46,6 +48,19 @@ app.get('/', (req, res)=>{
     res.render('index', {data:{user: req.user}})
 })
 
+app.get('/privacy', (req, res)=>{
+    //res.sendFile('Privacy-policy-v2-gladoire.pdf')
+    //res.sendFile(path.join(__dirname, '../public', 'Privacy-policy-v2-gladoire.pdf'))
+    //res.sendFile('Privacy-policy-v2-gladoire.pdf', { root: path.join(__dirname, '../public') });
+    res.redirect('/Privacy-policy-v2-gladoire.pdf')
+})
+
+app.get('/terms', (req, res)=>{
+    //res.sendFile('Terms-of-service-gladoire.pdf')
+    //res.sendFile(path.join(__dirname, '../public', 'Terms-of-service-gladoire.pdf'));
+    //res.sendFile('Terms-of-service-gladoire.pdf', { root: path.join(__dirname, '../public') });
+    res.redirect('/Terms-of-service-gladoire.pdf')
+})
 
 
 
