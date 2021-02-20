@@ -35,7 +35,8 @@ router.put('/', async(req,res)=>{
     try{
         await db.item.update({
             itm_name: req.body.itm_name,
-            itm_desc: req.body.itm_desc
+            itm_desc: req.body.itm_desc,
+            itm_notes: req.body.itm_notes
         }, {returning: true, where: {id: req.body.id, userId: req.user.id}})
         res.redirect(`/categories/${req.body.id}`)
     }catch(e){
@@ -43,6 +44,17 @@ router.put('/', async(req,res)=>{
         res.status(400).render('404')
     }
 
+})
+
+router.post('/', async(req,res)=>{
+    await db.item.create({categoryId: req.body.categoryId, userId: req.user.id, itm_name:req.body.itm_name,
+    itm_desc: req.body.itm_desc, itm_notes: req.body.itm_notes})
+    res.redirect('/categories')
+})
+
+router.delete('/', async(req,res)=>{
+    await db.item.destroy({where: {id: req.body.id, userId: req.body.userId}})
+    res.redirect('/categories/')
 })
 
 module.exports = router

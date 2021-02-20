@@ -12,12 +12,16 @@
         <label for="itm_desc">DESCRIPTION: </label>
         <input type="text" name="itm_desc" id="itm_desc" class="big-input" size="50" minlength="6" value="<%=data.item.itm_desc%>" required/>
         <br />
+        <label for="itm_notes">NOTES: </label>
+        <input type="text" name="itm_notes" id="itm_notes" class="big-input" size="50" minlength="6" value="<%=data.item.itm_notes%>" required/>
+        <br />
         <input type="submit" class="btn btn-primary local-btn" value="UPDATE">
-        <form action="/categories?_method=DELETE" method="POST">
-            <input type="hidden" name="id" value="<%=data.item.id%>">
-            <input type="hidden" name="userId" value="<%=data.user.id%>">
-            <input type="submit" class="btn btn-warning local-btn" value="DELETE">
-        </form>
+
+    </form>
+    <form action="/categories?_method=DELETE" method="POST">
+        <input type="hidden" name="id" value="<%=data.item.id%>">
+        <input type="hidden" name="userId" value="<%=data.user.id%>">
+        <input type="submit" class="btn btn-warning local-btn" value="DELETE">
     </form>
 
 

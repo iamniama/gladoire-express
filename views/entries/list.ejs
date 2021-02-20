@@ -1,0 +1,26 @@
+<div style="width:60%;">
+
+    <% if (typeof data.user != 'undefined') { %>
+        <a href="/categories/new" class="btn btn-info">Add New Item</a>
+        <% data.items.forEach(function(entry){ %>
+        <div class="card" style="width:55rem;">
+            <div class="card-body blue">
+                <h2><%=`${entry.sess_title}, ${entry.sess_date}`%> </h2>
+                <p class="card-text"><%=entry.cat_desc%></p>
+                <%category.items.forEach((item)=>{%>
+
+                <h3><a href="/categories/<%=item.id%>"><%=item.itm_name %> (click/tap to edit)</a></h3>
+                <p class="card-text"><%=item.itm_desc%></p>
+                <%})%>
+
+            </div>
+        </div>
+        <%})%>
+
+
+
+
+    <%}%>
+
+
+</div>

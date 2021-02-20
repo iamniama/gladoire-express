@@ -4,16 +4,24 @@
 
 
 
-    <form action="/categories?_method=PUT" method="POST" id="test">
-        <input type="hidden" name="id" value="<%=data.item.id%>">
+    <form action="/categories" method="POST" id="test" >
+        <select name="categoryId" id="categoryId" class="form-control">
+            <%data.cats.forEach((item)=>{ %>
+                <option value="<%=item.id%>"><%=item.cat_name%></option>
+
+           <% }) %>
+        </select>
         <label for="itm_name">NAME: </label>
-        <input type="text" name="itm_name" id="itm_name" class="big-input" size="50" minlength="6" required/>
+        <input type="text" name="itm_name" id="itm_name" class="big-input" size="50" required/>
         <br />
-        <label for="itm_desc">LINK: </label>
-        <input type="text" name="itm_desc" id="itm_desc" class="big-input" size="50" minlength="6" required/>
+        <label for="itm_desc">DESCRIPTION: </label>
+        <input type="text" name="itm_desc" id="itm_desc" class="big-input" size="50" required/>
+        <br />
+        <label for="itm_notes">NOTES: </label>
+        <input type="text" name="itm_notes" id="itm_notes" class="big-input" size="50" required/>
         <br />
 
-        <input type="submit" class="btn btn-primary local-btn" value="UPDATE">
+        <input type="submit" class="btn btn-primary local-btn" value="ADD">
 
 
     </form>
