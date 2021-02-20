@@ -5,11 +5,11 @@
         <% data.items.forEach(function(category){ %>
         <div class="card" style="width:55rem;">
             <div class="card-body blue">
-                <h2><%=category.cat_name%></h2>
+                <h2 class="card-title"><%=category.cat_name%></h2>
                 <p class="card-text"><%=category.cat_desc%></p>
                 <%category.items.forEach((item)=>{%>
 
-                <h3><a href="/categories/<%=item.id%>"><%=item.itm_name %> (click/tap to edit)</a></h3>
+                <h3 class="card-title"><a href="/categories/<%=item.id%>"><%=item.itm_name %> (click/tap to edit)</a></h3>
                 <p class="card-text"><%=item.itm_desc%></p>
                 <%})%>
 

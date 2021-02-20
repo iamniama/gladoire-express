@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   session_item.init({
-    itmId: DataTypes.INTEGER,
-    sessionId: DataTypes.INTEGER
+    sessionId: DataTypes.INTEGER,
+    itemId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'session_item',

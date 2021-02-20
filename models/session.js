@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       models.session.belongsTo(models.user)
       models.session.belongsToMany(models.item, {through: "session_item"})
+      models.session.hasMany(models.session_item)
     }
   };
   session.init({
@@ -25,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     sess_energypre: DataTypes.INTEGER,
     sess_energypost: DataTypes.INTEGER,
     sess_note: DataTypes.TEXT,
+    sess_duration: DataTypes.INTEGER,
     sess_shared: DataTypes.INTEGER,
     sess_public: DataTypes.INTEGER,
     sess_struck: DataTypes.INTEGER
