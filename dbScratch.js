@@ -15,7 +15,6 @@ let catinfo = db.category.findAll({include:[
 })
 console.log(catinfo)
 
-*/
 db.session.findAll({where: {userId: 3}, include:[
         db.session_item, {model: db.item, include: db.category}]})
     .then((sessInfo)=>{
@@ -27,3 +26,5 @@ db.session.findAll({where: {userId: 3}, include:[
             })
         })
     })
+*/
+console.log(new Date().toLocaleTimeString())

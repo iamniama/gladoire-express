@@ -12,6 +12,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       models.user.hasMany(models.session)
       models.user.hasMany(models.item)
+      models.user.hasMany(models.post)
+      models.user.hasMany(models.comment)
     }
   };
   user.init({

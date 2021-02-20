@@ -14,3 +14,12 @@ router.get('/new', async(req,res)=>{
         res.redirect('/')
     }
 })
+
+
+
+
+
+
+
+
+module.exports = router
