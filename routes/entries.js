@@ -6,21 +6,22 @@ const crypt_lib = require('../middleware/cryptolib')
 const passport = require('../config/ppConfig');
 const isLoggedIn = require('../middleware/isLoggedIn');
 
-//TODO: fix the session_item model so it includes the category to make that query easier....
-//TODO: delete the model and its migration, and the table, and then recreate the model
-//TODO: and add the associations to the session and category models
+
+//TODO: build seeders for category and make sure ppConfig code for new user aligns
 
 router.get('/', isLoggedIn, async(req,res)=>{
     //res.send("Get entry info")
     try{
+        //let catinfo = await db.category.findAll()
         let sessInfo = await db.session.findAll({where: {userId: req.user.id}, include:[
-            db.session_item, {model: db.item, include:{model: db.category}}
-            ]})
-        console.log(sessInfo.items)
+                db.session_item, {model: db.item, include: db.category}]})
+        console.log(sessInfo)
+
+        console.log(typeof sessInfo.items)
         res.render('entries/list', {data:{user: req.user, items: sessInfo}})
     }catch(e){
         console.log(e.message)
-        res.status(400).render('404')
+        res.status(400).render('404', {data:{user:req.user}})
     }
 })
 
@@ -56,7 +57,14 @@ router.post('/', isLoggedIn, async(req,res)=>{
         console.log(item)
         db.session_item.create({sessionId: newPostID, itemId: item})
     })
-    res.redirect('/sessions')
+    res.redirect('/entries')
 })
 
+router.get('/:id', async(req,res)=>{
+    let sessInfo = await db.session.findAll({where: {userId: req.user.id}, include:[
+            db.session_item, {model: db.item, include: db.category}]})
+    console.log(sessInfo[0].sess_note)
+    res.render('entries/display', {data:{user: req.user, items: sessInfo}})
+
+})
 module.exports = router

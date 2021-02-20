@@ -14,6 +14,9 @@
                 <li class="logofont smaller"><a href="/entries/">SESSIONS</a></li>
                 <li class="logofont smaller"><a href="/entries/new">NEW SESSION</a></li>
                 <li class="logofont smaller"><a href="/categories/">SESSION ITEMS</a></li>
+                <%if (data.user.user_level >= 3){%>
+                <li class="logofont smaller"><a href="/posts/new">NEW POST</a></li>
+            <%}%>
                 <li class="logofont smaller"><a href="/auth/logout">LOGOUT</a></li>
             <% } %>
             <li class="logofont smaller"><a href="/privacy">Privacy Policy</a></li>

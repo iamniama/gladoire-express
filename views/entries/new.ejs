@@ -53,23 +53,25 @@
                 <option value="6">Great!</option>
             </select>
             <br />
-            <label for="sess_notes">Session Notes: </label>
-            <textarea name="sess_notes" id="sess_notes" class="form-control"></textarea>
-            <script>
-                tinymce.init({
-                    selector: '#sess_notes'
-                });
-            </script>
             <label for="session_items">Session Items: </label>
             <select multiple class="form-control" name="session_items" id="session_items" size="10">
                 <%data.cats.forEach((category)=>{ %>
-                    <optgroup label="<%=category.cat_name%>">
-                        <%category.items.forEach((item)=>{%>
-                            <option value="<%=item.id%>"><%=item.itm_name%></option>
-                        <%})%>
-                    </optgroup>
+                <optgroup label="<%=category.cat_name%>">
+                    <%category.items.forEach((item)=>{%>
+                    <option value="<%=item.id%>"><%=item.itm_name%></option>
+                    <%})%>
+                </optgroup>
                 <%})%>
             </select>
+            <br />
+            <label for="sess_note">Session Notes: </label>
+            <textarea name="sess_note" id="sess_note" class="form-control"></textarea>
+            <script>
+                tinymce.init({
+                    selector: '#sess_note'
+                });
+            </script>
+
             <div class="checkgroup">
                 <label for="sess_shared">Make Session Public: </label>
                 <input type="checkbox" name="sess_shared" class="form-control" value="1">

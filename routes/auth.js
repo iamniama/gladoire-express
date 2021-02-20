@@ -46,8 +46,17 @@ router.get('/profile', isLoggedIn, async(req, res)=>{
 })
 
 router.put('/profile', isLoggedIn, async(req, res)=>{
-    await db.user.update({user_name: req.body.user_name, user_town: req.body.user_town, user_bio: req.body.user_bio},{where: {id: req.user.id}})
-    res.redirect('/auth/profile')
+    if (req.body.user_name.includes("ladoire")){
+        req.flash('error', 'Name is reserved for Gladoire staff')
+        res.redirect('/auth/profile')
+    }else {
+        await db.user.update({
+            user_name: req.body.user_name,
+            user_town: req.body.user_town,
+            user_bio: req.body.user_bio
+        }, {where: {id: req.user.id}})
+        res.redirect('/auth/profile')
+    }
 })
 
 module.exports = router

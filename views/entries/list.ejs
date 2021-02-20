@@ -4,8 +4,14 @@
         <% data.items.forEach(function(entry){ %>
         <div class="card" style="width:55rem;">
             <div class="card-body blue">
-                <h2><%=`${entry.sess_title}, ${entry.sess_date}`%> </h2>
+                <h2 class="card-title"><a href="/entries/<%=entry.id%>"><%=`${entry.sess_title}, ${entry.sess_date}`%></a> </h2>
                 <p class="card-text"><%=entry.sess_duration%> minutes</p>
+                <p class="card-text">Mood Change: <%= entry.sess_moodpost - entry.sess_moodpre%></p>
+                <p class="card-text">Energy Change: <%= entry.sess_energypost - entry.sess_energypre%></p>
+                <%entry.items.forEach((item)=>{%>
+                    <p class="card-text"><%=`${item.category.cat_name}: ${item.itm_name}`%></p>
+                <%})%>
+
 
 
 

@@ -1,0 +1,31 @@
+<div style="width:60%;">
+
+
+    <% if (typeof data.user != 'undefined') { %>
+        <% data.items.forEach(function(entry){ %>
+        <div class="card" style="width:55rem;">
+            <div class="card-body blue">
+                <h2 class="card-title"><%=`${entry.sess_title}, ${entry.sess_date}`%> </h2>
+                <p class="card-text">Duration: <%=entry.sess_duration%> minutes</p>
+                <p class="card-text">Mood Before: <%= entry.sess_moodpre %> Mood After <%=entry.sess_moodpost%></p>
+                <p class="card-text">Energy Before: <%= entry.sess_energypre%> Energy After: <%=entry.sess_energypre%></p>
+                <%entry.items.forEach((item)=>{%>
+                <p class="card-text"><%=`${item.category.cat_name}: ${item.itm_name}`%></p>
+                <%})%>
+                <h3 class="card-title">Session Notes:</h3>
+                <div class="card-body" id="sess_note"><%-entry.sess_note%></div>
+
+
+
+
+            </div>
+        </div>
+        <%})%>
+
+
+
+
+    <%}%>
+
+
+</div>

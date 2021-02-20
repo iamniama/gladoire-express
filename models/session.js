@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
+
     static associate(models) {
       models.session.belongsTo(models.user)
       models.session.belongsToMany(models.item, {through: "session_item"})
