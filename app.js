@@ -33,7 +33,7 @@ app.use(session({
   app.use(passport.initialize());
   app.use(passport.session());
   app.use(flash());
-  
+
 // 5 - Routes (controllers)
 
 app.use((req, res, next) => {
@@ -51,8 +51,12 @@ app.get('/privacy', async(req, res)=>{
     res.render('info/index', {data:{user: req.user, item: await db.doc.findOne({where:{doc_name: 'Privacy Policy'}})}})
 })
 
-app.get('/terms', async(req, res)=>{
+app.get('/tos', async(req, res)=>{
     res.render('info/index', {data:{user: req.user, item: await db.doc.findOne({where:{doc_name: 'Terms of Service'}})}})
+})
+
+app.get('/terms', (req, res)=>{
+    res.redirect('/tos')
 })
 
 
@@ -60,13 +64,16 @@ app.get('/terms', async(req, res)=>{
 
 //app.use('/', require('./routes/info'))
 app.use('/auth', require('./routes/auth'))
-//app.use('/categories', require('./routes/categories'))
+app.use('/categories', require('./routes/categories'))
 //app.use('/entries', require('./routes/entries'))
 app.use('/info', require('./routes/info'))
 app.use('/mod', require('./routes/mod'))
 
 
 
+app.get('*', function(req, res){
+    res.render('404', {data: {user: req.user}});
+});
 
 
 

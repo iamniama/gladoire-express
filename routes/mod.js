@@ -9,7 +9,12 @@ const isLoggedIn = require('../middleware/isLoggedIn');
 const redirSite = "https://www.fbi.gov/investigate/cyber"
 
 router.get('/', isLoggedIn, (req, res)=>{
-    res.send("Mod info")
+    if (req.user.user_level >= 5){
+        res.send("Mod info")
+    }else {
+        req.flash('error', 'You do not have moderator access')
+        res.redirect('/')
+    }
 })
 
 
@@ -56,7 +61,7 @@ router.get('/info/:id', isLoggedIn, async(req, res)=>{
 router.put('/info', isLoggedIn, async(req,res)=>{
     if (req.user.user_level >= 5){
         console.log(req.body)
-        db.doc.update({doc_name: req.body.doc_name, doc_url: req.body.doc_url}, { where: {id: req.body.id}})
+        db.doc.update({doc_name: req.body.doc_name, doc_url: req.body.doc_url, doc_desc: req.body.doc_desc}, { where: {id: req.body.id}})
         res.redirect(`/mod/info/${req.body.id}`)
     }else {
         req.flash('error', 'You do not have moderator access')

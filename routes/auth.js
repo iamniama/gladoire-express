@@ -40,12 +40,14 @@ router.get('/google/failure', (req, res) => {
     )
 })
 
-router.get('/profile', isLoggedIn, (req, res)=>{
-    res.send('Users will edit their profile information here.')
+router.get('/profile', isLoggedIn, async(req, res)=>{
+    //res.send('Users will edit their profile information here.')
+    res.render('auth/profile', {data:{user: req.user}})
 })
 
-router.put('/profile', isLoggedIn, (req, res)=>{
-    res.send(req.body)
+router.put('/profile', isLoggedIn, async(req, res)=>{
+    await db.user.update({user_name: req.body.user_name, user_town: req.body.user_town, user_bio: req.body.user_bio},{where: {id: req.user.id}})
+    res.redirect('/auth/profile')
 })
 
 module.exports = router

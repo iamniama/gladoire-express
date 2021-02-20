@@ -1,7 +1,6 @@
 
 
-// TODO: Update DB stuff in ppConfig to reflect the new User model
-// TODO: Test the auth with the new model before continuing dev
+
 
 require('dotenv').config();
 const db=require('../models')
@@ -38,7 +37,20 @@ passport.use(
             user_level: 0,
             user_email: profile.email,
             user_name: profile.displayName,
-          }).save().then((newUser) =>{
+          }).save().then(async(newUser) =>{
+                await db.item.bulkCreate(
+                   [
+                        {userId: newUser.id, categoryId: 3, itm_name: 'sitting meditation', itm_desc: 'seated meditation'},
+                        {userId: newUser.id, categoryId: 3, itm_name: 'dark meditation', itm_desc: 'seated meditation in darkness or blindfolded'},
+                        {userId: newUser.id, categoryId: 3, itm_name: 'walking meditation', itm_desc: 'kinhin or other walking meditation'},
+                        {userId: newUser.id, categoryId: 3, itm_name: 'yoga', itm_desc: 'one or more yoga poses, use the notes field for more details'},
+                        {userId: newUser.id, categoryId: 4, itm_name: 'Calm Whale 3rd Eye', itm_desc: 'recording by Calm Whale', itm_notes:"https://www.youtube.com/watch?v=0Oa_YtnXCVg&t=2825s"},
+                        {userId: newUser.id, categoryId: 5, itm_name: 'frankincense', itm_desc: 'a traditional scent for meditation and ritual'},
+                        {userId: newUser.id, categoryId: 6, itm_name: 'Sneha Sacred Cacao', itm_desc: 'Guatemalan cacao produced by mayan descendants with traditional methods'},
+                        {userId: newUser.id, categoryId: 6, itm_name: 'PURA Gelato', itm_desc: '50/50 hybrid in a vape cartridge'},
+
+                    ]
+                )
             done(null, newUser);
           });
         }

@@ -5,6 +5,7 @@ body {
     background-size: auto;
     background-repeat: no-repeat;
     box-sizing: border-box;
+    font-family: 'Shadows Into Light', cursive;
 
 }
 .dyno {
@@ -36,7 +37,7 @@ form {
 }
 
 .smaller {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 big-input {
@@ -48,12 +49,12 @@ big-input {
 }
 
 nav{
-    background-color: rgba(187, 233, 247, 0.4);
+    background-color: rgba(247, 235, 195, 0.4);
 
 }
 
 nav div {
-    background-color: rgba(187, 233, 247, 0.4);
+    background-color: rgba(247, 242, 223, 0.1);
 }
 
 
