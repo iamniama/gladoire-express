@@ -31,6 +31,13 @@ db.category.create({
         })
     })
 })
+
+db.category.findAll()
+    .then((categories)=>{
+        categories.forEach((cat)=>{
+            console.log(category.id)
+        })
+    })
 /*
 
 let catinfo = db.category.findAll({include:[
