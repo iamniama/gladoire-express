@@ -7,11 +7,11 @@
            <a href="/#" class="logofont smaller">Gladoire</a>
         </div>
         <ul class="nav navbar-nav logofont">
-            <li class="logofont"><a href="/">HOME</a></li>
-            <% if (typeof data.user != 'undefined') { %>
 
+            <% if (typeof data.user != 'undefined') { %>
+            <li class="logofont"><a href="/entries">SESSIONS</a></li>
                 <li class="logofont smaller"><a href="/auth/profile">PROFILE</a></li>
-                <li class="logofont smaller"><a href="/entries/">SESSIONS</a></li>
+
                 <li class="logofont smaller"><a href="/entries/new">NEW SESSION</a></li>
                 <li class="logofont smaller"><a href="/categories/">SESSION ITEMS</a></li>
                 <%if (data.user.user_level >= 3){%>

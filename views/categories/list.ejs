@@ -1,9 +1,9 @@
-<div style="width:60%;">
+<div>
 
     <% if (typeof data.user != 'undefined') { %>
-    <a href="/categories/new" class="btn btn-info">Add New Item</a>
+    <a href="/categories/new" class="btn btn-info" style="margin-bottom:10px;">Add New Item</a>
         <% data.items.forEach(function(category){ %>
-        <div class="card" style="width:55rem;">
+        <div class="card">
             <div class="card-body blue">
                 <h2 class="card-title"><%=category.cat_name%></h2>
                 <p class="card-text"><%=category.cat_desc%></p>

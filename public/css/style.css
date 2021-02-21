@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
+html {
+    box-sizing: border-box;
+}
+
+
 body {
     background: url('/img/paper3.jpg');
-    font-size: 2rem;
+    font-size: 2.5rem;
     background-size: cover;
     background-repeat: no-repeat;
     box-sizing: border-box;
     font-family: 'Shadows Into Light', cursive;
+    color: midnightblue;
     position: relative;
     min-height: 100%;
     height: 100%;
@@ -29,8 +35,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 100px;
+    border-bottom: 10px;
     box-sizing: border-box;
+    flex-grow: 1;
+    justify-content: center;
+    margin-left: 20%;
 }
 
 form {
@@ -56,7 +65,7 @@ form {
 }
 
 .smaller {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 big-input {
@@ -117,11 +126,17 @@ nav div {
     border-bottom-left-radius: 1%;
     padding: 15px;
     margin-bottom: 8px;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
+    align-self: center;
     border: 1px solid cornflowerblue;
-    width: 125%;
+    width: 60%;
+    color: midnightblue;
+    flex-grow: 2;
+    justify-content: center;
+    justify-self: center;
+
 }
 
 .green {
