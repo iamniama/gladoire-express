@@ -5,13 +5,13 @@
 
         <form action="/entries" method="POST">
             <label for="sess_title">Session Title: </label>
-            <input class="form-control" type="text" name="sess_title" id="sess_title">
+            <input class="form-control" type="text" name="sess_title" id="sess_title" required>
             <br />
             <label for="sess_date">Session Date: </label>
-            <input class="form-control" type="datetime-local" name="sess_date" id="sess_date">
+            <input class="form-control" type="datetime-local" name="sess_date" id="sess_date" required>
             <br />
             <label for="sess_duration">Session Duration (minutes): </label>
-            <input class="form-control" type="text" name="sess_duration" id="sess_duration">
+            <input class="form-control" type="text" name="sess_duration" id="sess_duration" required>
             <br />
             <label for="sess_weather">Weather: </label>
             <input class="form-control" type="text" name="sess_weather" id="sess_weather">
@@ -71,7 +71,7 @@
             </select>
             <br />
             <label for="sess_note">Session Notes: </label>
-            <textarea name="sess_note" id="sess_note" class="form-control" cols="100"></textarea>
+            <textarea name="sess_note" id="sess_note" class="form-control" cols="100" required></textarea>
             <script>
                 tinymce.init({
                     selector: '#sess_note',
