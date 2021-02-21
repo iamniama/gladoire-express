@@ -1,0 +1,512 @@
+{
+  ".env": {
+    "mt": "Tue Feb 16 2021 17:37:28 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\.env"
+  },
+  ".gitignore": {
+    "mt": "Fri Feb 12 2021 15:22:23 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\.gitignore"
+  },
+  ".idea/.gitignore": {
+    "mt": "Fri Feb 12 2021 21:38:51 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\.idea\\.gitignore"
+  },
+  ".idea/gladoire-express.iml": {
+    "mt": "Fri Feb 12 2021 21:38:51 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\.idea\\gladoire-express.iml"
+  },
+  ".idea/modules.xml": {
+    "mt": "Fri Feb 12 2021 21:38:51 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\.idea\\modules.xml"
+  },
+  ".idea/vcs.xml": {
+    "mt": "Fri Feb 12 2021 21:38:51 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\.idea\\vcs.xml"
+  },
+  ".idea/workspace.xml": {
+    "mt": "Sun Feb 21 2021 03:17:45 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\.idea\\workspace.xml"
+  },
+  "app.js": {
+    "mt": "Sat Feb 20 2021 18:33:46 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\app.js"
+  },
+  "config/config.json": {
+    "mt": "Sun Feb 21 2021 03:04:24 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\config\\config.json"
+  },
+  "config/ppConfig.js": {
+    "mt": "Fri Feb 19 2021 15:54:03 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\config\\ppConfig.js"
+  },
+  "dbScratch.js": {
+    "mt": "Sun Feb 21 2021 02:01:28 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\dbScratch.js"
+  },
+  "d_rsrc/Gladoire-Design-routes.png": {
+    "mt": "Fri Feb 12 2021 15:27:53 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\d_rsrc\\Gladoire-Design-routes.png"
+  },
+  "d_rsrc/Gladoire-ERD001-Draft.png": {
+    "mt": "Fri Feb 12 2021 15:27:53 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\d_rsrc\\Gladoire-ERD001-Draft.png"
+  },
+  "d_rsrc/Gladoire-ERD002-Draft.png": {
+    "mt": "Fri Feb 12 2021 15:27:53 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\d_rsrc\\Gladoire-ERD002-Draft.png"
+  },
+  "d_rsrc/Gladoire-mainlayout2.png": {
+    "mt": "Fri Feb 12 2021 15:27:53 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\d_rsrc\\Gladoire-mainlayout2.png"
+  },
+  "d_rsrc/Gladoire-newitem_layout.png": {
+    "mt": "Fri Feb 12 2021 15:27:53 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\d_rsrc\\Gladoire-newitem_layout.png"
+  },
+  "glad.sql": {
+    "mt": "Sat Feb 20 2021 19:59:28 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\glad.sql"
+  },
+  "middleware/cryptolib.js": {
+    "mt": "Fri Feb 12 2021 15:50:54 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\middleware\\cryptolib.js"
+  },
+  "middleware/isLoggedIn.js": {
+    "mt": "Tue Feb 16 2021 17:39:56 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\middleware\\isLoggedIn.js"
+  },
+  "migrations/20210217010838-create-user.js": {
+    "mt": "Tue Feb 16 2021 18:08:38 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\migrations\\20210217010838-create-user.js"
+  },
+  "migrations/20210217014616-create-info.js": {
+    "mt": "Tue Feb 16 2021 18:46:16 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\migrations\\20210217014616-create-info.js"
+  },
+  "migrations/20210217193849-create-doc.js": {
+    "mt": "Wed Feb 17 2021 12:38:49 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\migrations\\20210217193849-create-doc.js"
+  },
+  "migrations/20210219211910-create-category.js": {
+    "mt": "Fri Feb 19 2021 14:19:10 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\migrations\\20210219211910-create-category.js"
+  },
+  "migrations/20210219212029-create-item.js": {
+    "mt": "Fri Feb 19 2021 14:20:29 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\migrations\\20210219212029-create-item.js"
+  },
+  "migrations/20210219213731-create-session.js": {
+    "mt": "Fri Feb 19 2021 14:37:31 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\migrations\\20210219213731-create-session.js"
+  },
+  "migrations/20210220050652-create-session-item.js": {
+    "mt": "Fri Feb 19 2021 22:06:52 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\migrations\\20210220050652-create-session-item.js"
+  },
+  "migrations/20210220220407-create-post.js": {
+    "mt": "Sat Feb 20 2021 15:04:07 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\migrations\\20210220220407-create-post.js"
+  },
+  "migrations/20210220220937-create-comment.js": {
+    "mt": "Sat Feb 20 2021 15:09:37 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\migrations\\20210220220937-create-comment.js"
+  },
+  "models/category.js": {
+    "mt": "Fri Feb 19 2021 15:26:26 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\models\\category.js"
+  },
+  "models/comment.js": {
+    "mt": "Sat Feb 20 2021 15:11:10 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\models\\comment.js"
+  },
+  "models/doc.js": {
+    "mt": "Wed Feb 17 2021 12:53:01 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\models\\doc.js"
+  },
+  "models/index.js": {
+    "mt": "Sun Feb 21 2021 01:26:06 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\models\\index.js"
+  },
+  "models/info.js": {
+    "mt": "Tue Feb 16 2021 19:59:27 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\models\\info.js"
+  },
+  "models/item.js": {
+    "mt": "Fri Feb 19 2021 15:24:32 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\models\\item.js"
+  },
+  "models/post.js": {
+    "mt": "Sat Feb 20 2021 15:11:10 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\models\\post.js"
+  },
+  "models/session.js": {
+    "mt": "Sat Feb 20 2021 12:26:08 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\models\\session.js"
+  },
+  "models/session_item.js": {
+    "mt": "Sat Feb 20 2021 12:25:42 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\models\\session_item.js"
+  },
+  "models/user.js": {
+    "mt": "Sat Feb 20 2021 15:11:10 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\models\\user.js"
+  },
+  "package-lock.json": {
+    "mt": "Sun Feb 21 2021 03:04:04 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\package-lock.json"
+  },
+  "package.json": {
+    "mt": "Sun Feb 21 2021 02:17:09 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\package.json"
+  },
+  "planning.md": {
+    "mt": "Fri Feb 12 2021 17:19:45 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\planning.md"
+  },
+  "public/css/style.css": {
+    "mt": "Sat Feb 20 2021 22:59:21 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\public\\css\\style.css"
+  },
+  "public/files": {
+    "exists": true,
+    "is_dir": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\public\\files"
+  },
+  "public/img/btn_google_signin_dark_normal_web.png": {
+    "mt": "Wed Oct 21 2015 15:08:22 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\public\\img\\btn_google_signin_dark_normal_web.png"
+  },
+  "public/img/glad-logo.png": {
+    "mt": "Wed Feb 17 2021 10:59:02 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\public\\img\\glad-logo.png"
+  },
+  "public/img/notebook.png": {
+    "mt": "Wed Feb 17 2021 10:12:55 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\public\\img\\notebook.png"
+  },
+  "public/img/paper1.png": {
+    "mt": "Wed Feb 17 2021 10:24:16 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\public\\img\\paper1.png"
+  },
+  "public/img/paper2.jpg": {
+    "mt": "Wed Feb 17 2021 10:27:12 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\public\\img\\paper2.jpg"
+  },
+  "public/img/paper3.jpg": {
+    "mt": "Wed Feb 17 2021 10:40:19 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\public\\img\\paper3.jpg"
+  },
+  "public/Privacy-policy-v2-gladoire.pdf": {
+    "mt": "Tue Feb 16 2021 22:52:18 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\public\\Privacy-policy-v2-gladoire.pdf"
+  },
+  "public/Terms-of-service-gladoire.pdf": {
+    "mt": "Tue Feb 16 2021 22:32:30 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\public\\Terms-of-service-gladoire.pdf"
+  },
+  "README.md": {
+    "mt": "Fri Feb 12 2021 15:22:23 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\README.md"
+  },
+  "routes/auth.js": {
+    "mt": "Sat Feb 20 2021 18:44:39 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\routes\\auth.js"
+  },
+  "routes/categories.js": {
+    "mt": "Sun Feb 21 2021 00:00:31 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\routes\\categories.js"
+  },
+  "routes/entries.js": {
+    "mt": "Sun Feb 21 2021 00:06:13 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\routes\\entries.js"
+  },
+  "routes/info.js": {
+    "mt": "Fri Feb 19 2021 21:45:41 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\routes\\info.js"
+  },
+  "routes/mod.js": {
+    "mt": "Sun Feb 21 2021 00:00:27 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\routes\\mod.js"
+  },
+  "routes/posts.js": {
+    "mt": "Sun Feb 21 2021 00:00:27 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\routes\\posts.js"
+  },
+  "seeders": {
+    "exists": true,
+    "is_dir": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\seeders"
+  },
+  "views/404.ejs": {
+    "mt": "Sat Feb 20 2021 23:42:37 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\404.ejs"
+  },
+  "views/auth/index.ejs": {
+    "mt": "Fri Feb 12 2021 15:35:41 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\auth\\index.ejs"
+  },
+  "views/auth/login.ejs": {
+    "mt": "Fri Feb 12 2021 21:45:24 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\auth\\login.ejs"
+  },
+  "views/auth/profile.ejs": {
+    "mt": "Sat Feb 20 2021 22:40:56 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\auth\\profile.ejs"
+  },
+  "views/auth/signup.ejs": {
+    "mt": "Fri Feb 12 2021 21:45:10 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\auth\\signup.ejs"
+  },
+  "views/categories/display.ejs": {
+    "mt": "Fri Feb 12 2021 15:36:45 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\categories\\display.ejs"
+  },
+  "views/categories/edit.ejs": {
+    "mt": "Fri Feb 19 2021 18:15:37 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\categories\\edit.ejs"
+  },
+  "views/categories/index.ejs": {
+    "mt": "Fri Feb 12 2021 15:36:45 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\categories\\index.ejs"
+  },
+  "views/categories/list.ejs": {
+    "mt": "Sat Feb 20 2021 21:15:37 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\categories\\list.ejs"
+  },
+  "views/categories/new.ejs": {
+    "mt": "Fri Feb 19 2021 18:13:54 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\categories\\new.ejs"
+  },
+  "views/entries/display.ejs": {
+    "mt": "Sat Feb 20 2021 22:08:43 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\entries\\display.ejs"
+  },
+  "views/entries/index.ejs": {
+    "mt": "Fri Feb 12 2021 15:36:21 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\entries\\index.ejs"
+  },
+  "views/entries/list.ejs": {
+    "mt": "Sat Feb 20 2021 21:31:30 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\entries\\list.ejs"
+  },
+  "views/entries/new.ejs": {
+    "mt": "Sat Feb 20 2021 22:40:05 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\entries\\new.ejs"
+  },
+  "views/index.ejs": {
+    "mt": "Sat Feb 20 2021 22:56:52 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\index.ejs"
+  },
+  "views/info/index.ejs": {
+    "mt": "Wed Feb 17 2021 12:58:07 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\info\\index.ejs"
+  },
+  "views/layout.ejs": {
+    "mt": "Sat Feb 20 2021 22:26:37 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\layout.ejs"
+  },
+  "views/mod/edit.ejs": {
+    "mt": "Wed Feb 17 2021 12:54:39 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\mod\\edit.ejs"
+  },
+  "views/mod/index.ejs": {
+    "mt": "Fri Feb 12 2021 15:36:06 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\mod\\index.ejs"
+  },
+  "views/mod/infolist.ejs": {
+    "mt": "Wed Feb 17 2021 12:53:17 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\mod\\infolist.ejs"
+  },
+  "views/mod/newinfo.ejs": {
+    "mt": "Wed Feb 17 2021 12:53:53 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\mod\\newinfo.ejs"
+  },
+  "views/partials/alerts.ejs": {
+    "mt": "Wed Feb 17 2021 13:01:31 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\partials\\alerts.ejs"
+  },
+  "views/partials/nav.ejs": {
+    "mt": "Sat Feb 20 2021 21:07:06 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\partials\\nav.ejs"
+  },
+  "views/posts/edit.ejs": {
+    "mt": "Sat Feb 20 2021 23:21:56 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\posts\\edit.ejs"
+  },
+  "views/posts/list.ejs": {
+    "mt": "Sat Feb 20 2021 18:59:13 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\posts\\list.ejs"
+  },
+  "views/posts/new.ejs": {
+    "mt": "Sat Feb 20 2021 22:54:54 GMT-0700 (Mountain Standard Time)",
+    "exists": true,
+    "state": 1,
+    "path": "D:\\CODE\\GA-P2\\gladoire-express\\views\\posts\\new.ejs"
+  }
+}
