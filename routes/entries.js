@@ -44,6 +44,7 @@ router.get('/new', isLoggedIn, async(req, res)=>{
 
 router.post('/', isLoggedIn, async(req,res)=>{
     try {
+        console.log("BLAHBLAHBLAHBLAHBLAH")
         let newpost = {
             sess_title: req.body.sess_title,
             userId: req.user.id,
