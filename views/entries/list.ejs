@@ -1,8 +1,8 @@
-<div style="width:60%;">
+
 
     <% if (typeof data.user != 'undefined') { %>
         <% data.items.forEach(function(entry){ %>
-        <div class="card" style="width:55rem;">
+        <div class="card">
             <div class="card-body blue">
                 <h2 class="card-title"><a href="/entries/<%=entry.id%>"><%=`${entry.sess_title}, ${entry.sess_date}`%></a> </h2>
                 <p class="card-text"><%=entry.sess_duration%> minutes</p>
@@ -25,4 +25,4 @@
     <%}%>
 
 
-</div>
+
