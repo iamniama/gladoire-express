@@ -38,7 +38,8 @@
     "passport-local": "^1.0.0",
     "pg": "^8.5.1",
     "sequelize": "^6.5.0",
-    "sequelize-cli": "^6.2.0"
+    "sequelize-cli": "^6.2.0",
+    "connect-flash": "^0.1.1"
   },
   "devDependencies": {
     "connect-flash": "^0.1.1"
