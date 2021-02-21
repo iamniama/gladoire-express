@@ -4,6 +4,7 @@
   "description": "GA SEI P2 project, a meditation journal",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
