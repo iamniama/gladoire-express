@@ -27,4 +27,11 @@ db.session.findAll({where: {userId: 3}, include:[
         })
     })
 */
-console.log(new Date().toLocaleTimeString())
+db.post.findAll({include:[{model: db.comment, include:[db.user]}]})
+.then((posts)=>{
+    posts.forEach((post)=>{
+        post.comments.forEach((cmt)=>{
+            console.log(`At ${cmt.cmnt_date}, ${cmt.user.user_name} said "${cmt.cmnt_text}"`)
+        })
+    })
+})

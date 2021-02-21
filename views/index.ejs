@@ -1,19 +1,46 @@
-<div style="width:60%;">
+<div>
 
     <br />
     <br />
-    <div style="font-weight: 600; color: darkgreen" id="EVERYONE" class="demo">
-        Everyone can see this bit, which will display when there is something to display
+    <div style="font-weight: 600; color: darkgreen" id="EVERYONE">
+        <%data.items.forEach((post)=>{%>
+        <div class="card" style="width:55rem;">
+            <div class="card-body blue">
+                <h2 class="card-title"><%=post.post_title%></h2>
+                <p class="card-text"><%=post.post_date%></p>
+                <p class="card-text"><%-post.post_note%></p>
+                <%if (typeof data.user != 'undefined') {%>
+                    <form method="POST" action="/posts/comment">
+                        <input type="hidden" value="<%=post.id%>" name="postid" id="postid">
+                        <label for="cmnt_text">Comment: </label>
+                        <input type="text" name="cmnt_text" id="cmnt_text">
+                        <input type="submit" class="btn btn-info btn-local" value="Add Comment">
+                    </form>
+                    <%post.comments.forEach((cmt)=>{%>
+                        <p class="card-text"><%=`At ${cmt.cmnt_date}, ${cmt.user.user_name} said:`%><br /><%= `"${cmt.cmnt_text}"`%> </p>
+                        <%if (data.user.user_level >= 5) {%>
+                           <form action="/posts/comment?_method=DELETE" method="post">
+                               <input type="hidden" value="<%=cmt.id%>" name="commentid" id="commentid">
+                               <input type="submit" class="btn btn-danger btn-local" value="Delete">
+                           </form>
+                        <%}%>
+                    <%})%>
+                <%}%>
+
+            </div>
+        </div>
+
+        <%})%>
     </div>
     <br />
     <% if (typeof data.user != 'undefined') { %>
-        <div style="color: darkblue" id="AUTHONLY" class="demo"> <strong>Authenticated Users ONLY</strong></div>
+
 
     <%}%>
     <br />
     <% if (typeof data.user != 'undefined' && data.user.user_level > 3) { %>
 
-        <div style="color: red;font-weight: bolder;" id="LEVEL3ONLY" class="demo"><h3>SECRET SQUIRREL STUFF</h3></div>
+
 
     <%}%>
 

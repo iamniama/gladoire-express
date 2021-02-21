@@ -1,0 +1,21 @@
+<div style="width:60%;">
+
+    <% if (typeof data.user != 'undefined') { %>
+        <a href="/posts/new" class="btn btn-info">Add New Post</a>
+        <% data.items.forEach(function(post){ %>
+        <div class="card" style="width:55rem;">
+            <div class="card-body blue">
+                <h2 class="card-title"><%=post.post_title%></h2>
+                <p class="card-text"><%=post.post_date%></p>
+
+            </div>
+        </div>
+        <%})%>
+
+
+
+
+    <%}%>
+
+
+</div>

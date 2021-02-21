@@ -43,8 +43,8 @@ app.use((req, res, next) => {
     next();
   });
 
-app.get('/', (req, res)=>{
-    res.render('index', {data:{user: req.user}})
+app.get('/', async(req, res)=>{
+    res.render('index', {data:{user: req.user, items: await db.post.findAll({include:[{model: db.comment, include:[db.user]}]})}})
 })
 
 app.get('/privacy', async(req, res)=>{
