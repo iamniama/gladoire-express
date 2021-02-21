@@ -14,9 +14,6 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "nzmjdapxdqpygj",
-    "password": "drac0n1s",
-    "database": "gladoire",
     "host": "127.0.0.1",
     "dialect": "postgres",
     "use_env_variable": "DATABASE_URL"
