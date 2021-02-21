@@ -4,8 +4,10 @@ If you *must* run your own Gladoire, instead of using mine and maybe kicking bac
 
 - Fork and clone the repo
 - Setup Google OAuth client access (via Google)
+    - This process, NGL, is slightly painful...
     - generate a reasonable Privacy Policy and TOS
-    - and link them into the site.  honestly, would be easier to adjust the routes for TOS and privacy to send the doc location down instead of storing it in the datbase
+    - and link them into the site.  honestly, would be easier to adjust the routes for TOS and privacy to send the doc location down instead of storing it in the database
+    - you could send the filename down as part of {data}, and have the embed control pick it up from there...
 - From the console/bash shell:
     - ```npm i```
     - ```sequelize db:migrate```
