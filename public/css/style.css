@@ -144,5 +144,13 @@ input {
     margin-bottom: 5px;
 }
 textarea {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+#sess_note {
+    margin-bottom: 10px;
+}
+
+.btn-local {
+    margin-top: 10px
 }

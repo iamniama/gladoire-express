@@ -17,7 +17,7 @@
                         <input type="submit" class="btn btn-info btn-local" value="Add Comment">
                     </form>
                     <%post.comments.forEach((cmt)=>{%>
-                        <p class="card-text"><%=`At ${cmt.cmnt_date}, ${cmt.user.user_name} said:`%><br /><%= `"${cmt.cmnt_text}"`%> </p>
+                        <p class="card-text" ><%=`At ${cmt.cmnt_date}, ${cmt.user.user_name} said:`%><br /><%= `"${cmt.cmnt_text}"`%> </p>
                         <%if (data.user.user_level >= 5) {%>
                            <form action="/posts/comment?_method=DELETE" method="post">
                                <input type="hidden" value="<%=cmt.id%>" name="commentid" id="commentid">

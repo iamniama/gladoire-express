@@ -1,4 +1,5 @@
 const express = require('express')
+const axios = require('axios')
 const db = require('../models')
 const router = express.Router()
 router.use(express.urlencoded({ extended: false }));
@@ -15,9 +16,8 @@ router.get('/', isLoggedIn, async(req,res)=>{
         //let catinfo = await db.category.findAll()
         let sessInfo = await db.session.findAll({where: {userId: req.user.id}, include:[
                 db.session_item, {model: db.item, include: db.category}]})
-        console.log(sessInfo)
+        //console.log(sessInfo)
 
-        console.log(typeof sessInfo.items)
         res.render('entries/list', {data:{user: req.user, items: sessInfo}})
     }catch(e){
         console.log(e.message)
@@ -25,46 +25,64 @@ router.get('/', isLoggedIn, async(req,res)=>{
     }
 })
 
-router.get('/new', async(req, res)=>{
-
-    let catinfo = await db.category.findAll({include:[
-            {model: db.item,
-                where: {userId: req.user.id}}
-        ]})
-    res.render('entries/new', {data: {user: req.user, cats: catinfo}})
+router.get('/new', isLoggedIn, async(req, res)=>{
+    try {
+        mdata = (await axios.get(`https://api.farmsense.net/v1/moonphases/?d=${(new Date()).getTime()}`)).data
+        console.log(`******************MOON DATA: ${mdata}*********************`)
+        let catinfo = await db.category.findAll({
+            include: [
+                {
+                    model: db.item,
+                    where: {userId: req.user.id}
+                }
+            ]
+        })
+        res.render('entries/new', {data: {user: req.user, cats: catinfo, moon: mdata}})
+    }catch(e){
+        console.log(e.message)
+        res.status(400).render('404')
+    }
 })
 
 router.post('/', isLoggedIn, async(req,res)=>{
-    let newpost = {
-        sess_title: req.body.sess_title,
-        userId: req.user.id,
-        sess_date: req.body.sess_date,
-        sess_moodpre: req.body.sess_moodpre,
-        sess_moodpost: req.body.sess_moodpost,
-        sess_energypre: req.body.sess_energypre,
-        sess_energypost: req.body.sess_energypost,
-        sess_note: req.body.sess_note,
-        sess_duration: req.body.sess_duration
+    try {
+        let newpost = {
+            sess_title: req.body.sess_title,
+            userId: req.user.id,
+            sess_date: req.body.sess_date,
+            sess_weather: req.body.sess_weather,
+            sess_moon: req.body.sess_moon,
+            sess_moodpre: req.body.sess_moodpre,
+            sess_moodpost: req.body.sess_moodpost,
+            sess_energypre: req.body.sess_energypre,
+            sess_energypost: req.body.sess_energypost,
+            sess_note: req.body.sess_note,
+            sess_duration: req.body.sess_duration
+        }
+
+        let newPostID = (await db.session.create(newpost)).id
+        req.body.session_items.forEach((item) => {
+            console.log(item)
+            db.session_item.create({sessionId: newPostID, itemId: item})
+        })
+        res.redirect('/entries')
+    }catch(e){
+        console.log(e.message)
+        res.status(400).render('404')
     }
-    if (req.body.sess_shared){
-        newpost.sess_shared = req.body.sess_shared
-    }
-    if (req.body.sess_public){
-        newpost.sess_public = req.body.sess_public
-    }
-    let newPostID = (await db.session.create(newpost)).id
-    req.body.session_items.forEach((item)=>{
-        console.log(item)
-        db.session_item.create({sessionId: newPostID, itemId: item})
-    })
-    res.redirect('/entries')
 })
 
-router.get('/:id', async(req,res)=>{
-    let sessInfo = await db.session.findAll({where: {userId: req.user.id}, include:[
-            db.session_item, {model: db.item, include: db.category}]})
-    console.log(sessInfo[0].sess_note)
-    res.render('entries/display', {data:{user: req.user, items: sessInfo}})
-
+router.get('/:id', isLoggedIn, async(req,res)=>{
+    try {
+        let sessInfo = await db.session.findAll({
+            where: {userId: req.user.id}, include: [
+                db.session_item, {model: db.item, include: db.category}]
+        })
+        console.log(sessInfo[0].sess_note)
+        res.render('entries/display', {data: {user: req.user, items: sessInfo}})
+    }catch(e){
+        console.log(e.message)
+        res.status(400).render('404')
+    }
 })
 module.exports = router

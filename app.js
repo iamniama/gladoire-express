@@ -73,7 +73,8 @@ app.use('/posts', require('./routes/posts'))
 
 
 app.get('*', function(req, res){
-    res.render('404', {data: {user: req.user}});
+    //res.render('404', {data: {user: req.user}});
+    res.redirect('/')
 });
 
 

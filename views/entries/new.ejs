@@ -13,6 +13,12 @@
             <label for="sess_duration">Session Duration (minutes): </label>
             <input class="form-control" type="text" name="sess_duration" id="sess_duration">
             <br />
+            <label for="sess_weather">Weather: </label>
+            <input class="form-control" type="text" name="sess_weather" id="sess_weather">
+            <br />
+            <label for="sess_moon">Moon: </label>
+            <input class="form-control" type="text" name="sess_moon" id="sess_moon" value="<%=`${data.moon[0].Moon[0]}, ${data.moon[0].Phase}`%>">
+            <br />
             <label for="sess_moodpre">Mood Pre-Session</label>
             <select name="sess_moodpre" id="sess_moodpre" class="form-control">
                 <option value="1">Lowest</option>
@@ -65,19 +71,16 @@
             </select>
             <br />
             <label for="sess_note">Session Notes: </label>
-            <textarea name="sess_note" id="sess_note" class="form-control"></textarea>
+            <textarea name="sess_note" id="sess_note" class="form-control" cols="100"></textarea>
             <script>
                 tinymce.init({
-                    selector: '#sess_note'
+                    selector: '#sess_note',
+                    width: "100%",
+                    height: "400px"
                 });
             </script>
 
-            <div class="checkgroup">
-                <label for="sess_shared">Make Session Public: </label>
-                <input type="checkbox" name="sess_shared" class="form-control" value="1">
-                <label for="sess_public">Share Session: </label>
-                <input type="checkbox" name="sess_public" class="form-control" value="1">
-            </div>
+
             <input type="submit" value="Add Entry" class="btn btn-primary btn-local">
         </form>
         <%}%>
