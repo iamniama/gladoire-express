@@ -51,7 +51,7 @@ router.post('/info', isLoggedIn, async(req, res)=>{
 
 router.get('/info/:id', isLoggedIn, async(req, res)=>{
     try {
-        if(typeof req.params.id == 'number') {
+
             if (req.user.user_level >= 5) {
                 res.render('mod/edit', {
                     data: {
@@ -63,9 +63,6 @@ router.get('/info/:id', isLoggedIn, async(req, res)=>{
                 req.flash('error', 'You do not have moderator access')
                 res.redirect('/')
             }
-        }else{
-            res.redirect('/info')
-        }
     }catch(e){
         console.log(e.message)
         res.status(400).render('404')

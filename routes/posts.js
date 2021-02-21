@@ -94,9 +94,6 @@ router.delete('/comment', isLoggedIn, async(req,res)=>{
 
 router.get('/:id', isLoggedIn, async(req,res)=>{
     try{
-        if (typeof req.params.id != 'number'){
-            res.redirect('/posts')
-        }else {
             if (req.user.user_level >= 5) {
                 let debugdat = await db.post.findOne({where: {id: req.params.id}})
                 console.log(`******************************DEBUG>>>>${debugdat}<<<<<*******************`)
@@ -106,9 +103,7 @@ router.get('/:id', isLoggedIn, async(req,res)=>{
                         item: debugdat
                     }
                 })
-            } else {
-                res.redirect('/')
-            }
+
         }
     }catch(e){
         console.log(e.message)

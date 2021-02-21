@@ -35,16 +35,13 @@ router.get('/new', isLoggedIn, async(req, res)=>{
 
 router.get('/:id', isLoggedIn, async(req,res)=>{
     try {
-        if (typeof req.params.id != 'number'){
-            res.redirect('/categories')
-        }else{
         res.render('categories/edit', {
             data: {
                 user: req.user,
                 item: await db.item.findOne({where: {id: req.params.id, userId: req.user.id}})
             }
         })
-        }
+
     }catch(e){
         console.log(e.message)
         res.status(400).render('404')

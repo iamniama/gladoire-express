@@ -72,16 +72,13 @@ router.post('/', isLoggedIn, async(req,res)=>{
 
 router.get('/:id', isLoggedIn, async(req,res)=>{
     try {
-        if (typeof req.params.id != 'number'){
-            res.redirect('/entries')
-        }else{
         let sessInfo = await db.session.findAll({
             where: {userId: req.user.id}, include: [
                 db.session_item, {model: db.item, include: db.category}]
         })
         console.log(sessInfo[0].sess_note)
         res.render('entries/display', {data: {user: req.user, items: sessInfo}})
-        }
+
     }catch(e){
         console.log(e.message)
         res.status(400).render('404')
