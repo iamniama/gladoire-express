@@ -18,4 +18,4 @@ If you *must* run your own Gladoire, instead of using mine and maybe kicking bac
 - Also set that user's user_level to something above 5.
     - This makes your account the admin, and allows that user access to all features (posts, moderation, etc)
     - I set mine to 99, just cos
-- Start Gladoiring and leave me with a dry beak...
+- Start Gladoiring and maybe buy me a beer so I can wet my beak, huh?

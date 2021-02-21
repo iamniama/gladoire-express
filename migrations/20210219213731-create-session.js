@@ -44,6 +44,9 @@ module.exports = {
       sess_public: {
         type: Sequelize.INTEGER
       },
+      sess_duration: {
+        type: Sequelize.INTEGER
+      },
       sess_struck: {
         type: Sequelize.INTEGER
       },

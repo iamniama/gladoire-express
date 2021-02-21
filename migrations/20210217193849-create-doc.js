@@ -14,6 +14,9 @@ module.exports = {
       doc_url: {
         type: Sequelize.STRING
       },
+      doc_desc: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
