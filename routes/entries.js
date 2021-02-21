@@ -28,9 +28,7 @@ router.get('/', isLoggedIn, async(req,res)=>{
 router.get('/new', isLoggedIn, async(req, res)=>{
     try {
         let utime = Math.floor((new Date()).getTime() / 1000)
-        console.log(`********************TIMESTAMP FOR TESTING${utime}**********************`)
         let mdata = (await axios.get(`https://api.farmsense.net/v1/moonphases/?d=${utime}`)).data
-        console.log(`******************MOON DATA: ${mdata}*********************`)
         let catinfo = await db.category.findAll({
             include: [
                 {
