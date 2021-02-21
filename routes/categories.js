@@ -1,10 +1,8 @@
 const express = require('express')
 const db = require('../models')
 const router = express.Router()
-router.use(express.urlencoded({ extended: false }));
-const crypt_lib = require('../middleware/cryptolib')
-const passport = require('../config/ppConfig');
-const isLoggedIn = require('../middleware/isLoggedIn');
+router.use(express.urlencoded({ extended: false }))
+const isLoggedIn = require('../middleware/isLoggedIn')
 
 
 router.get('/', isLoggedIn, async(req,res)=>{
@@ -37,12 +35,16 @@ router.get('/new', isLoggedIn, async(req, res)=>{
 
 router.get('/:id', isLoggedIn, async(req,res)=>{
     try {
+        if (typeof req.params.id != 'number'){
+            res.redirect('/categories')
+        }else{
         res.render('categories/edit', {
             data: {
                 user: req.user,
                 item: await db.item.findOne({where: {id: req.params.id, userId: req.user.id}})
             }
         })
+        }
     }catch(e){
         console.log(e.message)
         res.status(400).render('404')

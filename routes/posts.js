@@ -1,10 +1,8 @@
 const express = require('express')
 const db = require('../models')
 const router = express.Router()
-router.use(express.urlencoded({ extended: false }));
-const crypt_lib = require('../middleware/cryptolib')
-const passport = require('../config/ppConfig');
-const isLoggedIn = require('../middleware/isLoggedIn');
+router.use(express.urlencoded({ extended: false }))
+const isLoggedIn = require('../middleware/isLoggedIn')
 
 
 router.get('/new', isLoggedIn, async(req,res)=>{
@@ -96,17 +94,21 @@ router.delete('/comment', isLoggedIn, async(req,res)=>{
 
 router.get('/:id', isLoggedIn, async(req,res)=>{
     try{
-        if (req.user.user_level >= 5) {
-            let debugdat = await db.post.findOne({where: {id: req.params.id}})
-            console.log(`******************************DEBUG>>>>${debugdat}<<<<<*******************`)
-            res.render('posts/edit', {
-                data: {
-                    user: req.user,
-                    item: debugdat
-                }
-            })
-        }else{
-            res.redirect('/')
+        if (typeof req.params.id != 'number'){
+            res.redirect('/posts')
+        }else {
+            if (req.user.user_level >= 5) {
+                let debugdat = await db.post.findOne({where: {id: req.params.id}})
+                console.log(`******************************DEBUG>>>>${debugdat}<<<<<*******************`)
+                res.render('posts/edit', {
+                    data: {
+                        user: req.user,
+                        item: debugdat
+                    }
+                })
+            } else {
+                res.redirect('/')
+            }
         }
     }catch(e){
         console.log(e.message)

@@ -2,11 +2,8 @@ const express = require('express')
 const db = require('../models')
 const router = express.Router()
 router.use(express.urlencoded({ extended: false }));
-const crypt_lib = require('../middleware/cryptolib')
-const passport = require('../config/ppConfig');
 const isLoggedIn = require('../middleware/isLoggedIn');
 
-const redirSite = "https://www.fbi.gov/investigate/cyber"
 
 router.get('/', isLoggedIn, (req, res)=>{
     if (req.user.user_level >= 5){
@@ -37,35 +34,63 @@ router.get('/info/new', isLoggedIn, async(req,res)=>{
 })
 
 router.post('/info', isLoggedIn, async(req, res)=>{
-    if (req.user.user_level >= 5) {
-        db.doc.create(req.body)
-        res.redirect('/mod/info/')
-    }else {
-        req.flash('error', 'You do not have moderator access')
-        res.redirect('/')
+    try {
+        if (req.user.user_level >= 5) {
+            db.doc.create(req.body)
+            res.redirect('/mod/info/')
+        } else {
+            req.flash('error', 'You do not have moderator access')
+            res.redirect('/')
+        }
+    }catch(e){
+        console.log(e.message)
+        res.status(400).render('404')
     }
 })
 
 
 router.get('/info/:id', isLoggedIn, async(req, res)=>{
-    if (req.user.user_level >= 5) {
-        res.render('mod/edit', {data: {user: req.user, item: await db.doc.findOne({where:{'id': req.params.id}})}})
-    }else {
-        req.flash('error', 'You do not have moderator access')
-        res.redirect('/')
+    try {
+        if(typeof req.params.id == 'number') {
+            if (req.user.user_level >= 5) {
+                res.render('mod/edit', {
+                    data: {
+                        user: req.user,
+                        item: await db.doc.findOne({where: {'id': req.params.id}})
+                    }
+                })
+            } else {
+                req.flash('error', 'You do not have moderator access')
+                res.redirect('/')
+            }
+        }else{
+            res.redirect('/info')
+        }
+    }catch(e){
+        console.log(e.message)
+        res.status(400).render('404')
     }
 })
 
 
 
 router.put('/info', isLoggedIn, async(req,res)=>{
-    if (req.user.user_level >= 5){
-        console.log(req.body)
-        db.doc.update({doc_name: req.body.doc_name, doc_url: req.body.doc_url, doc_desc: req.body.doc_desc}, { where: {id: req.body.id}})
-        res.redirect(`/mod/info/${req.body.id}`)
-    }else {
-        req.flash('error', 'You do not have moderator access')
-        res.redirect('/')
+    try {
+        if (req.user.user_level >= 5) {
+            console.log(req.body)
+            db.doc.update({
+                doc_name: req.body.doc_name,
+                doc_url: req.body.doc_url,
+                doc_desc: req.body.doc_desc
+            }, {where: {id: req.body.id}})
+            res.redirect(`/mod/info/${req.body.id}`)
+        } else {
+            req.flash('error', 'You do not have moderator access')
+            res.redirect('/')
+        }
+    }catch(e){
+        console.log(e.message)
+        res.status(400).render('404')
     }
 })
 

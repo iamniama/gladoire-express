@@ -2,10 +2,8 @@ const express = require('express')
 const axios = require('axios')
 const db = require('../models')
 const router = express.Router()
-router.use(express.urlencoded({ extended: false }));
-const crypt_lib = require('../middleware/cryptolib')
-const passport = require('../config/ppConfig');
-const isLoggedIn = require('../middleware/isLoggedIn');
+router.use(express.urlencoded({ extended: false }))
+const isLoggedIn = require('../middleware/isLoggedIn')
 
 
 //TODO: build seeders for category and make sure ppConfig code for new user aligns
@@ -74,12 +72,16 @@ router.post('/', isLoggedIn, async(req,res)=>{
 
 router.get('/:id', isLoggedIn, async(req,res)=>{
     try {
+        if (typeof req.params.id != 'number'){
+            res.redirect('/entries')
+        }else{
         let sessInfo = await db.session.findAll({
             where: {userId: req.user.id}, include: [
                 db.session_item, {model: db.item, include: db.category}]
         })
         console.log(sessInfo[0].sess_note)
         res.render('entries/display', {data: {user: req.user, items: sessInfo}})
+        }
     }catch(e){
         console.log(e.message)
         res.status(400).render('404')
