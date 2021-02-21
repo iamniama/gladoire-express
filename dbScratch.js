@@ -1,4 +1,36 @@
 const db=require('./models')
+db.category.create({
+    cat_name: "dummy",
+    cat_desc: "to delete"
+}).then((newitem)=>{
+    db.category.destroy({where: {id: newitem.id}})
+})
+db.category.create({
+    cat_name: "dummy",
+    cat_desc: "to delete"
+}).then((newitem)=>{
+    db.category.destroy({where: {id: newitem.id}})
+})
+
+db.category.create({
+    cat_name: "Practices",
+    cat_desc: "Meditation, ritual, and other practices"
+}).then(()=>{
+    db.category.create({
+        cat_name: "Music",
+        cat_desc: "Music, live or recorded"
+    }).then(()=>{
+        db.category.create({
+            cat_name: "Scents",
+            cat_desc: "Incense, oils, and perfumes to scent the space"
+        }).then(()=>{
+            db.category.create({
+                cat_name: "Enhancers",
+                cat_desc: "Cacao, cannabis, and other substances to enhance the practice"
+            })
+        })
+    })
+})
 /*
 
 let catinfo = db.category.findAll({include:[
@@ -26,12 +58,14 @@ db.session.findAll({where: {userId: 3}, include:[
             })
         })
     })
-*/
+
 db.post.findAll({include:[{model: db.comment, include:[db.user]}]})
 .then((posts)=>{
     posts.forEach((post)=>{
         post.comments.forEach((cmt)=>{
-            console.log(`At ${cmt.cmnt_date}, ${cmt.user.user_name} said "${cmt.cmnt_text}"`)
+            console.log(`At ${cmt.cmnt_date}, ${cmt.user.user_name} said "${}"`)
         })
     })
 })
+
+*/

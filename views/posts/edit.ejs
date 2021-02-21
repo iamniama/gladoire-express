@@ -1,0 +1,29 @@
+
+<div style="width:60%;">
+
+    <% if (typeof data.user != 'undefined' && data.user.user_level >= 3) { %>
+
+
+        <form action="/posts?_method=PUT" method="POST">
+
+            <label for="post_title">Post Title: </label>
+            <input type="hidden" name="id" id="id" value="<%=data.item.id%>">
+            <input class="form-control" type="text" name="post_title" id="post_title" value="<%=data.item.post_title%>">
+            <br />
+            <label for="post_note">Post: </label>
+            <textarea name="post_note" id="post_note" class="form-control"><%-data.item.post_note%> </textarea>
+            <script>
+                tinymce.init({
+                    selector: '#post_note'
+                });
+            </script>
+
+            <input type="submit" value="Update Post" class="btn btn-primary btn-local">
+        </form>
+    <%}%>
+</div>
+
+
+
+
+

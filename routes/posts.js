@@ -36,6 +36,8 @@ router.post('/comment', isLoggedIn, async(req,res)=>{
     }
 })
 
+
+
 router.get('/list', isLoggedIn, async(req,res)=>{
     try {
         if(req.user.user_level >= 5) {
@@ -67,7 +69,7 @@ router.post('/', isLoggedIn, async(req,res)=>{
         res.status(400).render('404')
     }
 })
-
+/*
 router.get('/:id', isLoggedIn, async(req,res)=> {
     try {
         res.render('posts/edit', {data: {user: req.user, items: await db.post.findOne({where: {id: req.params.id}})}})
@@ -76,7 +78,7 @@ router.get('/:id', isLoggedIn, async(req,res)=> {
         res.status(400).render('404')
     }
 })
-
+*/
 
 router.delete('/comment', isLoggedIn, async(req,res)=>{
     try {
@@ -92,7 +94,35 @@ router.delete('/comment', isLoggedIn, async(req,res)=>{
     }
 })
 
+router.get('/:id', isLoggedIn, async(req,res)=>{
+    try{
+        if (req.user.user_level >= 5) {
+            let debugdat = await db.post.findOne({where: {id: req.params.id}})
+            console.log(`******************************DEBUG>>>>${debugdat}<<<<<*******************`)
+            res.render('posts/edit', {
+                data: {
+                    user: req.user,
+                    item: debugdat
+                }
+            })
+        }else{
+            res.redirect('/')
+        }
+    }catch(e){
+        console.log(e.message)
+        res.status(400).render('404')
+    }
+})
 
+router.put('/', isLoggedIn, async(req,res)=>{
+    try{
+        db.post.update({post_title: req.body.post_title, post_note: req.body.post_note}, {where: {id: req.body.id}})
+        res.redirect(`/posts/${req.body.id}`)
+    }catch(e){
+        console.log(e.message)
+        res.status(400).render('404')
+    }
+})
 
 
 module.exports = router
