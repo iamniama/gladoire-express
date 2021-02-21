@@ -6,7 +6,7 @@ router.use(express.urlencoded({ extended: false }))
 const isLoggedIn = require('../middleware/isLoggedIn')
 
 
-//TODO: build seeders for category and make sure ppConfig code for new user aligns
+
 
 router.get('/', isLoggedIn, async(req,res)=>{
     //res.send("Get entry info")
