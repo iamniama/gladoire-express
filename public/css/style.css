@@ -192,6 +192,10 @@ input, select {
     margin-bottom: 5px;
     font-size: 28px;
 }
+.fc-size-override{
+    font-size: 28px;
+}
+
 textarea {
     margin-bottom: 15px;
 }

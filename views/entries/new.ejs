@@ -5,22 +5,22 @@
 
         <form action="/entries" method="POST">
             <label for="sess_title">Session Title: </label>
-            <input class="form-control" type="text" name="sess_title" id="sess_title" required>
+            <input class="form-control fc-size-override" type="text" name="sess_title" id="sess_title" required>
             <br />
             <label for="sess_date">Session Date: </label>
-            <input class="form-control" type="datetime-local" name="sess_date" id="sess_date" required>
+            <input class="form-control fc-size-override" type="datetime-local" name="sess_date" id="sess_date" required>
             <br />
             <label for="sess_duration">Session Duration (minutes): </label>
-            <input class="form-control" type="text" name="sess_duration" id="sess_duration" required>
+            <input class="form-control fc-size-override" type="text" name="sess_duration" id="sess_duration" required>
             <br />
             <label for="sess_weather">Weather: </label>
-            <input class="form-control" type="text" name="sess_weather" id="sess_weather">
+            <input class="form-control fc-size-override" type="text" name="sess_weather" id="sess_weather">
             <br />
             <label for="sess_moon">Moon: </label>
-            <input class="form-control" type="text" name="sess_moon" id="sess_moon" value="<%=`${data.moon[0].Moon[0]}, ${data.moon[0].Phase}`%>">
+            <input class="form-control fc-size-override" type="text" name="sess_moon" id="sess_moon" value="<%=`${data.moon[0].Moon[0]}, ${data.moon[0].Phase}`%>">
             <br />
             <label for="sess_moodpre">Mood Pre-Session</label>
-            <select name="sess_moodpre" id="sess_moodpre" class="form-control">
+            <select name="sess_moodpre" id="sess_moodpre" class="form-control fc-size-override">
                 <option value="1">Lowest</option>
                 <option value="2">Low</option>
                 <option value="3">Blah</option>
@@ -30,7 +30,7 @@
             </select>
             <br />
             <label for="sess_moodpost">Mood Post-Session</label>
-            <select name="sess_moodpost" id="sess_moodpost" class="form-control">
+            <select name="sess_moodpost" id="sess_moodpost" class="form-control fc-size-override">
                 <option value="1">Lowest</option>
                 <option value="2">Low</option>
                 <option value="3">Blah</option>
@@ -40,7 +40,7 @@
             </select>
             <br />
             <label for="sess_energypre">Energy Pre-Session</label>
-            <select name="sess_energypre" id="sess_energypre" class="form-control">
+            <select name="sess_energypre" id="sess_energypre" class="form-control fc-size-override">
                 <option value="1">Burnt out</option>
                 <option value="2">Run down</option>
                 <option value="3">Blah</option>
@@ -50,7 +50,7 @@
             </select>
             <br />
             <label for="sess_energypost">Energy Post-Session</label>
-            <select name="sess_energypost" id="sess_energypost" class="form-control">
+            <select name="sess_energypost" id="sess_energypost" class="form-control fc-size-override">
                 <option value="1">Burnt out</option>
                 <option value="2">Run down</option>
                 <option value="3">Blah</option>
@@ -60,7 +60,7 @@
             </select>
             <br />
             <label for="session_items">Session Items: </label>
-            <select multiple class="form-control" name="session_items" id="session_items" size="10">
+            <select multiple class="form-control fc-size-override" name="session_items" id="session_items" size="10">
                 <%data.cats.forEach((category)=>{ %>
                 <optgroup label="<%=category.cat_name%>">
                     <%category.items.forEach((item)=>{%>
@@ -71,7 +71,7 @@
             </select>
             <br />
             <label for="sess_note">Session Notes: </label>
-            <textarea name="sess_note" id="sess_note" class="form-control" cols="100"></textarea>
+            <textarea name="sess_note" id="sess_note" class="form-control fc-size-override" cols="100"></textarea>
             <script>
                 tinymce.init({
                     selector: '#sess_note',
