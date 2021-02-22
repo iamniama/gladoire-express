@@ -44,26 +44,27 @@ router.get('/new', isLoggedIn, async (req, res) => {
 
 router.get('filtered/:filter', isLoggedIn, async(req,res)=>{
     let data = {user: req.user}
-    switch(parseInt(req.params.filter)){
-        case 1:
+    //console.log(parseInt(req.params.filter))
+    switch(req.params.filter){
+        case "1":
             data.items = await db.session.findAll({
                 where: {userId: req.user.id, sess_energypost:{$gt: sess_energypre}}, include: [
                     db.session_item, {model: db.item, include: db.category}]
             })
             break;
-        case 2:
+        case "2":
             data.items = await db.session.findAll({
                 where: {userId: req.user.id, sess_energypost:{$lt: sess_energypre}}, include: [
                     db.session_item, {model: db.item, include: db.category}]
             })
             break;
-        case 3:
+        case "3":
             data.items = await db.session.findAll({
                 where: {userId: req.user.id, sess_moodpost:{$gt: sess_moodpre}}, include: [
                     db.session_item, {model: db.item, include: db.category}]
             })
             break;
-        case 4:
+        case "4":
             data.items = await db.session.findAll({
                 where: {userId: req.user.id, sess_moodpost:{$lt: sess_moodpre}}, include: [
                     db.session_item, {model: db.item, include: db.category}]
