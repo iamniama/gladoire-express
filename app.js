@@ -44,6 +44,8 @@ app.use((req, res, next) => {
     next();
   });
 
+// we pass req.user down into the template via the data object, so that we can do use it for access control
+
 app.get('/', async(req, res)=>{
     res.render('index', {data:{user: req.user, items: await db.post.findAll({include:[{model: db.comment, include:[db.user]}]})}})
 })

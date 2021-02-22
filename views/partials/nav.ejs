@@ -9,10 +9,12 @@
         <ul class="nav navbar-nav logofont">
 
             <% if (typeof data.user != 'undefined') { %>
+            <!--only logged on users see below here-->
             <li class="inverted"><a href="/entries">SESSIONS</a></li>
                 <li class="logofont smaller folder-tab"><a href="/auth/profile">PROFILE</a></li>
                 <li class="logofont smaller folder-tab"><a href="/categories/">SESSION ITEMS</a></li>
                 <li class="logofont smaller folder-tab"><a href="/entries/new">NEW SESSION</a></li>
+            <!-- only moderators and above see the items about posts -->
                 <%if (data.user.user_level >= 3){%>
                 <li class="logofont smaller folder-tab"><a href="/posts/new">NEW POST</a></li>
                 <li class="logofont smaller folder-tab"><a href="/posts/list">POSTS</a></li>
