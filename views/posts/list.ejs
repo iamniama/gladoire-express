@@ -3,7 +3,7 @@
     <% if (typeof data.user != 'undefined') { %>
         <a href="/posts/new" class="btn btn-info">Add New Post</a>
         <% data.items.forEach(function(post){ %>
-        <div class="card" style="width:55rem;">
+        <div class="card">
             <div class="card-body blue">
                 <h2 class="card-title"><a href="/posts/<%=post.id%>"> <%=post.post_title%></a></h2>
                 <p class="card-text"><%=post.post_date%></p>
