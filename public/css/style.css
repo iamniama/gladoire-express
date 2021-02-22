@@ -213,9 +213,9 @@ textarea {
 }
 
 .folder-tab {
-    border-top: 1px solid darkgray;
-    border-left: 1px solid darkgray;
-    border-right: 1px solid darkgray;
+    border-top: 2px solid darkgray;
+    border-left: 2px solid darkgray;
+    border-right: 2px solid darkgray;
     border-top-right-radius: 10%;
     border-top-left-radius: 20%;
 }
