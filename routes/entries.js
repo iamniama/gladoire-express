@@ -2,28 +2,28 @@ const express = require('express')
 const axios = require('axios')
 const db = require('../models')
 const router = express.Router()
-router.use(express.urlencoded({ extended: false }))
+router.use(express.urlencoded({extended: false}))
 const isLoggedIn = require('../middleware/isLoggedIn')
 
 
-
-
-router.get('/', isLoggedIn, async(req,res)=>{
+router.get('/', isLoggedIn, async (req, res) => {
     //res.send("Get entry info")
-    try{
+    try {
         //let catinfo = await db.category.findAll()
-        let sessInfo = await db.session.findAll({where: {userId: req.user.id}, include:[
-                db.session_item, {model: db.item, include: db.category}]})
+        let sessInfo = await db.session.findAll({
+            where: {userId: req.user.id}, include: [
+                db.session_item, {model: db.item, include: db.category}]
+        })
         //console.log(sessInfo)
 
-        res.render('entries/list', {data:{user: req.user, items: sessInfo}})
-    }catch(e){
+        res.render('entries/list', {data: {user: req.user, items: sessInfo}})
+    } catch (e) {
         console.log(e.message)
-        res.status(400).render('404', {data:{user:req.user}})
+        res.status(400).render('404', {data: {user: req.user}})
     }
 })
 
-router.get('/new', isLoggedIn, async(req, res)=>{
+router.get('/new', isLoggedIn, async (req, res) => {
     try {
         let utime = Math.floor((new Date()).getTime() / 1000)
         let mdata = (await axios.get(`https://api.farmsense.net/v1/moonphases/?d=${utime}`)).data
@@ -36,15 +36,14 @@ router.get('/new', isLoggedIn, async(req, res)=>{
             ]
         })
         res.render('entries/new', {data: {user: req.user, cats: catinfo, moon: mdata}})
-    }catch(e){
+    } catch (e) {
         console.log(e.message)
         res.status(400).render('404')
     }
 })
 
-router.post('/', isLoggedIn, async(req,res)=>{
+router.post('/', isLoggedIn, async (req, res) => {
     try {
-        console.log("BLAHBLAHBLAHBLAHBLAH")
         let newpost = {
             sess_title: req.body.sess_title,
             userId: req.user.id,
@@ -65,13 +64,13 @@ router.post('/', isLoggedIn, async(req,res)=>{
             db.session_item.create({sessionId: newPostID, itemId: item})
         })
         res.redirect('/entries')
-    }catch(e){
+    } catch (e) {
         console.log(e.message)
         res.status(400).render('404')
     }
 })
 
-router.get('/:id', isLoggedIn, async(req,res)=>{
+router.get('/:id', isLoggedIn, async (req, res) => {
     try {
         let sessInfo = await db.session.findAll({
             where: {userId: req.user.id}, include: [
@@ -80,7 +79,7 @@ router.get('/:id', isLoggedIn, async(req,res)=>{
         console.log(sessInfo[0].sess_note)
         res.render('entries/display', {data: {user: req.user, items: sessInfo}})
 
-    }catch(e){
+    } catch (e) {
         console.log(e.message)
         res.status(400).render('404')
     }

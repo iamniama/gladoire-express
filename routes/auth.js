@@ -1,14 +1,14 @@
 const express = require('express')
 const db = require('../models')
 const router = express.Router()
-router.use(express.urlencoded({ extended: false }))
+router.use(express.urlencoded({extended: false}))
 //const crypto = require('crypto')
 const passport = require('../config/ppConfig')
 const isLoggedIn = require('../middleware/isLoggedIn')
 
 router.get(
     '/google',
-    passport.authenticate('google', { scope: ['email', 'profile'] })
+    passport.authenticate('google', {scope: ['email', 'profile']})
 )
 
 router.get(
@@ -40,12 +40,12 @@ router.get('/google/failure', (req, res) => {
     )
 })
 
-router.get('/profile', isLoggedIn, async(req, res)=>{
+router.get('/profile', isLoggedIn, async (req, res) => {
     //res.send('Users will edit their profile information here.')
-    res.render('auth/profile', {data:{user: req.user}})
+    res.render('auth/profile', {data: {user: req.user}})
 })
 
-router.put('/profile', isLoggedIn, async(req, res)=>{
+router.put('/profile', isLoggedIn, async (req, res) => {
     try {
         if (req.body.user_name.includes("ladoire")) {
             req.flash('error', 'Name is reserved for Gladoire staff')
@@ -59,7 +59,7 @@ router.put('/profile', isLoggedIn, async(req, res)=>{
             req.flash('success', 'Profile updated...')
             res.redirect('/auth/profile')
         }
-    }catch(e){
+    } catch (e) {
         console.log(e.message)
         res.status(400).render('404')
     }
