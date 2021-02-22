@@ -16,6 +16,7 @@
                         <input type="text" name="cmnt_text" id="cmnt_text" class="form-control" size="75">
                         <input type="submit" class="btn btn-info btn-local" value="Add Comment">
                     </form>
+                <div class="comment-block">
                     <%post.comments.forEach((cmt)=>{%>
                         <p class="card-text" ><%=`At ${cmt.cmnt_date.toLocaleString()}, ${cmt.user.user_name} said:`%><br /><%= `"${cmt.cmnt_text}"`%> </p>
                         <%if (data.user.user_level >= 5 || data.user.id == cmt.userId) {%>
@@ -25,6 +26,7 @@
                            </form>
                         <%}%>
                     <%})%>
+                </div>
                 <%}%>
 
             </div>

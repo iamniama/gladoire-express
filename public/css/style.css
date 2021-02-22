@@ -92,6 +92,11 @@ nav{
 
 }
 
+.comment-block{
+    height: 100px;
+    overflow-y:auto;
+}
+
 embed {
     margin-left: 20px;
 }
