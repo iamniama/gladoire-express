@@ -6,7 +6,7 @@
         <%data.items.forEach((post)=>{%>
         <div class="card" >
             <div class="card-body blue">
-                <h2 class="card-title"><u>%=post.post_title%></u></h2>
+                <h2 class="card-title"><u><%=post.post_title%></u></h2>
                 <p class="card-text"><%=post.post_date.toLocaleString()%></p>
                 <p class="card-text"><%-post.post_note%></p>
                 <%if (typeof data.user != 'undefined') {%>
