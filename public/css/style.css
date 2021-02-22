@@ -119,7 +119,9 @@ nav div {
     background-color:tan;
     padding: 5px;
 }
-
+.footbar{
+    list-style-type: none;
+}
 .tan {
     background-color:tan;
     margin-left: 20px;
