@@ -211,3 +211,11 @@ textarea {
 .btn-local {
     margin-top: 10px
 }
+
+.folder-tab {
+    border-top: 1px solid darkgray;
+    border-left: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+    border-top-right-radius: 10%;
+    border-top-right-radius: 20%;
+}
