@@ -219,4 +219,6 @@ textarea {
     border-top-right-radius: 10%;
     border-top-left-radius: 35%;
     background-color: navajowhite;
+    color: black;
+    font-weight: bolder;
 }
