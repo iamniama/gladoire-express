@@ -18,12 +18,13 @@
                     </form>
                 <div class="comment-block">
                     <%post.comments.forEach((cmt)=>{%>
-                        <p class="card-text" ><%=`At ${cmt.cmnt_date.toLocaleString()}, ${cmt.user.user_name} said:`%><br /><%= `"${cmt.cmnt_text}"`%> </p>
+                        <p class="card-text" ><%=`At ${cmt.cmnt_date.toLocaleString()}, ${cmt.user.user_name} said:`%><br /><%= `"${cmt.cmnt_text}"`%>
                         <%if (data.user.user_level >= 5 || data.user.id == cmt.userId) {%>
                            <form action="/posts/comment?_method=DELETE" method="post">
                                <input type="hidden" value="<%=cmt.id%>" name="commentid" id="commentid">
                                <input type="submit" class="btn btn-danger btn-local" value="Delete">
                            </form>
+                        </p>
                         <%}%>
                     <%})%>
                 </div>
