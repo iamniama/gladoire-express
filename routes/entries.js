@@ -73,7 +73,7 @@ router.post('/', isLoggedIn, async (req, res) => {
 router.get('/:id', isLoggedIn, async (req, res) => {
     try {
         let sessInfo = await db.session.findAll({
-            where: {userId: req.user.id}, include: [
+            where: {userId: req.user.id, id: req.params.id}, include: [
                 db.session_item, {model: db.item, include: db.category}]
         })
         console.log(sessInfo[0].sess_note)
