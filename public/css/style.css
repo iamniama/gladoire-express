@@ -153,9 +153,9 @@ footer{
 .blue {
     background: url('/img/paper3.jpg');
     margin-left: 10%;
-    border-top-left-radius:5%;
+    border-top-left-radius:10%;
     border-top-right-radius:5%;
-    border-bottom-right-radius:5%;
+    border-bottom-right-radius:10%;
     border-bottom-left-radius: 5%;
     padding: 15px;
     margin-bottom: 8px;
