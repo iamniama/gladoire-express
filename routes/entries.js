@@ -49,7 +49,7 @@ router.get('/filtered/:filter', isLoggedIn, async(req,res)=>{
     switch(req.params.filter){
         case "1":
             data.items = await db.session.findAll({
-                where: {userId: req.user.id, sess_energypost:{$gt: Sequelize.col('sess_energypre')}}, include: [
+                where: {userId: req.user.id, sess_energypost:{$gt: db.session.column.sess_energypre}}, include: [
                     db.session_item, {model: db.item, include: db.category}]
             })
             break;
