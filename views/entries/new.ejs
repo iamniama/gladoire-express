@@ -76,7 +76,11 @@
                 tinymce.init({
                     selector: '#sess_note',
                     width: "100%",
-                    height: "400px"
+                    height: "400px",
+                    classic: true,
+                    plugins: 'lists',
+                    toolbar: 'undo redo | styleselect | forecolor | bold italic | numlist bullist | alignleft aligncenter alignright alignjustify | outdent indent | link image | code'
+
                 });
             </script>
 

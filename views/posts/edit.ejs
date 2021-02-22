@@ -14,7 +14,11 @@
             <textarea name="post_note" id="post_note" class="form-control fc-size-override" required><%-data.item.post_note%> </textarea>
             <script>
                 tinymce.init({
-                    selector: '#post_note'
+                    selector: '#post_note',
+                    classic: true,
+                    plugins: 'lists',
+                    toolbar: 'undo redo | styleselect | forecolor | bold italic | numlist bullist | alignleft aligncenter alignright alignjustify | outdent indent | link image | code'
+
                 });
             </script>
 
