@@ -11,14 +11,13 @@
             <% if (typeof data.user != 'undefined') { %>
             <li class="inverted"><a href="/entries">SESSIONS</a></li>
                 <li class="logofont smaller folder-tab"><a href="/auth/profile">PROFILE</a></li>
-
-                <li class="logofont smaller folder-tab"><a href="/entries/new">NEW SESSION</a></li>
                 <li class="logofont smaller folder-tab"><a href="/categories/">SESSION ITEMS</a></li>
+                <li class="logofont smaller folder-tab"><a href="/entries/new">NEW SESSION</a></li>
                 <%if (data.user.user_level >= 3){%>
                 <li class="logofont smaller folder-tab"><a href="/posts/new">NEW POST</a></li>
                 <li class="logofont smaller folder-tab"><a href="/posts/list">POSTS</a></li>
             <%}%>
-                <li class="logofont smaller btn btn-secondary"><a href="/auth/logout">LOGOUT</a></li>
+                <li class="logofont smaller folder-tab"><a href="/auth/logout">LOGOUT</a></li>
             <% } %>
 
         </ul>
