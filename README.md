@@ -1,6 +1,10 @@
 # gladoire-express
 Gladoire is a journaling app for meditators and spiritual practitioners
 
+- [BETA Site](https://gladoire-beta.herokuapp.com/)
+
+
+
 ## What It Is - Raw
 Gladoire is an Express web application for tracking one's experiences in meditation and other spiritual practices.
 The idea started as *'21 Grams'*, a tracker for cacao and cannabis pairings, named primarily for the (in my experience) optimal meditative dose of cacao, but also from a scientist's theory about the weight of the human soul [Wikipedia](https://en.wikipedia.org/wiki/21_grams_experiment) in the early 20th century.
