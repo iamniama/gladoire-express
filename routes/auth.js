@@ -56,6 +56,7 @@ router.put('/profile', isLoggedIn, async(req, res)=>{
                 user_town: req.body.user_town,
                 user_bio: req.body.user_bio
             }, {where: {id: req.user.id}})
+            req.flash('success', 'Profile updated...')
             res.redirect('/auth/profile')
         }
     }catch(e){

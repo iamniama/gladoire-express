@@ -57,6 +57,7 @@ router.put('/', isLoggedIn, async(req,res)=>{
             itm_desc: req.body.itm_desc,
             itm_notes: req.body.itm_notes
         }, {returning: true, where: {id: req.body.id, userId: req.user.id}})
+        req.flash('success', 'Item updated')
         res.redirect(`/categories/${req.body.id}`)
     }catch(e){
         console.log(e.message)

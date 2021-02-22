@@ -80,6 +80,7 @@ router.put('/info', isLoggedIn, async(req,res)=>{
                 doc_url: req.body.doc_url,
                 doc_desc: req.body.doc_desc
             }, {where: {id: req.body.id}})
+            req.flash('success', 'Item updated')
             res.redirect(`/mod/info/${req.body.id}`)
         } else {
             req.flash('error', 'You do not have moderator access')

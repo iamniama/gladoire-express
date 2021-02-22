@@ -114,6 +114,7 @@ router.get('/:id', isLoggedIn, async(req,res)=>{
 router.put('/', isLoggedIn, async(req,res)=>{
     try{
         db.post.update({post_title: req.body.post_title, post_note: req.body.post_note}, {where: {id: req.body.id}})
+        req.flash('success', 'Item updated')
         res.redirect(`/posts/${req.body.id}`)
     }catch(e){
         console.log(e.message)
