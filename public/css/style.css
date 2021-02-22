@@ -95,6 +95,7 @@ nav{
 .comment-block{
     height: 100px;
     overflow-y:auto;
+    width: 80%;
 }
 
 embed {
