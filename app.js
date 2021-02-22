@@ -17,6 +17,9 @@ const app = express();
 app.set('view engine', 'ejs');
 
 // 4 - App Middleware (app.use)
+var favicon = require('serve-favicon');
+
+app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(ejsLayouts);
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
