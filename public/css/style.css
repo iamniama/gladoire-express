@@ -93,7 +93,7 @@ nav{
 }
 
 .comment-block{
-    height: 100px;
+    height: 150px;
     overflow-y:auto;
     width: 80%;
     border: 1px solid whitesmoke;
