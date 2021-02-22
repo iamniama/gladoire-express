@@ -119,10 +119,17 @@ nav div {
     background-color:tan;
     padding: 5px;
 }
+
 .footbar{
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    font-weight: bolder;
+    padding: 15px;
+}
+
+footer{
+    border-top: 1px solid cornflowerblue;
 }
 .tan {
     background-color:tan;
