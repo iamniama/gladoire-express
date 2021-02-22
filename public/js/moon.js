@@ -1,6 +1,6 @@
 document.querySelector('#sess_date').addEventListener('change', (evt)=>{
     //alert((document.querySelector('#sess_date').valueAsDate).getTime() / 1000)
-    alert(document.querySelector('#sess_date').valueAsDate.getTime())
+    alert(document.querySelector('#sess_date').valueAsDate)
     let tstamp = Math.floor((document.querySelector('#sess_date').valueAsDate).getTime() / 1000)
     alert(`DEBUG: ${tstamp}`)
     let mdata = fetch(`https://api.farmsense.net/v1/moonphases/?d=${tstamp}`)
