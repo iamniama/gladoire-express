@@ -131,11 +131,9 @@ nav div {
 }
 
 footer{
-    border-top: 1px solid cornflowerblue;
     bottom: 0;
     left: 0;
-    display: flex;
-    flex-direction: row;
+    position: absolute;
 }
 .tan {
     background-color:tan;
