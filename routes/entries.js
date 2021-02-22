@@ -44,7 +44,7 @@ router.get('/new', isLoggedIn, async (req, res) => {
 
 router.get('filtered/:filter', isLoggedIn, async(req,res)=>{
     let data = {user: req.user}
-    switch(req.params.filter){
+    switch(parseInt(req.params.filter)){
         case 1:
             data.items = await db.session.findAll({
                 where: {userId: req.user.id, sess_energypost:{$gt: sess_energypre}}, include: [
