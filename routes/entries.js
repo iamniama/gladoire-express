@@ -56,19 +56,19 @@ router.get('/filtered/:filter', isLoggedIn, async(req,res)=>{
             break;
         case "2":
             data.items = await db.session.findAll({
-                where: {userId: req.user.id, sess_energypost:{$lt: Sequelize.col('sess_energypre')}}, include: [
+                where: {userId: req.user.id, [Sequelize.Op.and]: [Sequelize.literal(`session.sess_energypost < session.sess_energypre`)]}, include: [
                     db.session_item, {model: db.item, include: db.category}]
             })
             break;
         case "3":
             data.items = await db.session.findAll({
-                where: {userId: req.user.id, sess_moodpost:{$gt: Sequelize.col('sess_moodpre')}}, include: [
+                where: {userId: req.user.id, [Sequelize.Op.and]: [Sequelize.literal(`session.sess_moodpost > session.sess_moodpre`)]}, include: [
                     db.session_item, {model: db.item, include: db.category}]
             })
             break;
         case "4":
             data.items = await db.session.findAll({
-                where: {userId: req.user.id, sess_moodpost:{$lt: Sequelize.col('sess_moodpre')}}, include: [
+                where: {userId: req.user.id, [Sequelize.Op.and]: [Sequelize.literal(`session.sess_moodpost < session.sess_moodpre`)]}, include: [
                     db.session_item, {model: db.item, include: db.category}]
             })
             break;
