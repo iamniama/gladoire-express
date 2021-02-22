@@ -80,7 +80,8 @@ router.get('/:id', isLoggedIn, async(req,res)=> {
 
 router.delete('/comment', isLoggedIn, async(req,res)=>{
     try {
-        if (req.user.user_level >= 5) {
+        const comment = await db.comment.findOne({where:{id: req.body.commentid}})
+        if (req.user.user_level >= 5 || req.user.id == comment.userId) {
             db.comment.destroy({where: {id: req.body.commentid}})
             res.redirect('/')
         } else {
