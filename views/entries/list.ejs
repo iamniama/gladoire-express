@@ -1,6 +1,10 @@
 
 
     <% if (typeof data.user != 'undefined') { %>
+        See entries with: <a href="/entries/filtered/1">Energy Gain</a>
+        <a href="/entries/filtered/2">Energy Decrease</a>&nbsp;&nbsp;&nbsp;
+        <a href="/entries/filtered/3">Mood Improve</a>&nbsp;&nbsp;&nbsp;
+        <a href="/entries/filtered/4">Mood Decline</a>&nbsp;&nbsp;&nbsp;
         <% data.items.forEach(function(entry){ %>
         <div class="card">
             <div class="card-body blue">
