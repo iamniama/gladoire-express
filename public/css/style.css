@@ -132,6 +132,9 @@ nav div {
 
 footer{
     border-top: 1px solid cornflowerblue;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 .tan {
     background-color:tan;
