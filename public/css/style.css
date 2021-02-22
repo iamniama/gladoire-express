@@ -4,6 +4,10 @@ html {
     box-sizing: border-box;
 }
 
+.inverted {
+    background-color: cornflowerblue;
+    color: whitesmoke;
+}
 
 body {
     background-color: rgba(57, 154, 207, 0.8);
