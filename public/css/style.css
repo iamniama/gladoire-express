@@ -135,6 +135,10 @@ footer{
     left: 0;
     position: absolute;
 }
+
+.gimme-space{
+    margin-left: 20px;
+}
 .tan {
     background-color:tan;
     margin-left: 20px;
