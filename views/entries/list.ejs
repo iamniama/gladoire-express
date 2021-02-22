@@ -4,7 +4,7 @@
         <% data.items.forEach(function(entry){ %>
         <div class="card">
             <div class="card-body blue">
-                <h2 class="card-title"><a href="/entries/<%=entry.id%>"><%=`${entry.sess_title}, ${entry.sess_date}`%></a> </h2>
+                <h2 class="card-title"><a href="/entries/<%=entry.id%>"><%=`${entry.sess_title}, ${entry.sess_date.toLocaleString()}`%></a> </h2>
                 <p class="card-text"><%=entry.sess_duration%> minutes</p>
                 <p class="card-text">Mood Change: <%= entry.sess_moodpost - entry.sess_moodpre%></p>
                 <p class="card-text">Energy Change: <%= entry.sess_energypost - entry.sess_energypre%></p>
