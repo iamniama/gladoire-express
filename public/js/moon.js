@@ -1,4 +1,4 @@
-document.querySelector("#sess_date").addEventListener('input', (evt)=>{
+document.querySelector("#sess_date").addEventListener('focusout', (evt)=>{
     let tstamp = Math.floor(evt.target.valueAsDate.getTime() / 1000)
     alert(tstamp)
     let mdata = fetch(`https://api.farmsense.net/v1/moonphases/?d=${tstamp}`)
