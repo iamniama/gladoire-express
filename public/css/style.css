@@ -126,6 +126,7 @@ nav div {
     flex-direction: row;
     font-weight: bolder;
     padding: 15px;
+    justify-content: space-evenly;
 }
 
 footer{
