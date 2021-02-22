@@ -194,6 +194,7 @@ input, select {
 }
 .fc-size-override{
     font-size: 26px;
+    padding: 3px;
 }
 
 textarea {
