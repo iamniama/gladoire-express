@@ -121,6 +121,8 @@ nav div {
 }
 .footbar{
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
 }
 .tan {
     background-color:tan;
