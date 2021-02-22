@@ -1,3 +1,8 @@
+//TODO: Add search filters to entries list (energy/mood gains, specific item, etc)
+//TODO: figure out how to put the delete button at the end of the comment line
+//TODO: aging out for comments
+//TODO: automate user promotion?
+
 const isLoggedIn = require('./middleware/isLoggedIn');
 const session = require('express-session');
 const passport = require('./config/ppConfig');
