@@ -42,7 +42,7 @@ router.get('/new', isLoggedIn, async (req, res) => {
     }
 })
 
-router.get('filtered/:filter', isLoggedIn, async(req,res)=>{
+router.get('/filtered/:filter', isLoggedIn, async(req,res)=>{
     let data = {user: req.user}
     //console.log(parseInt(req.params.filter))
     switch(req.params.filter){
@@ -73,7 +73,7 @@ router.get('filtered/:filter', isLoggedIn, async(req,res)=>{
         default:
             res.redirect('/entries')
     }
-    res.render('entries/list', {data: {user: req.user, items: sessInfo}})
+    res.render('entries/list', {data})
 })
 
 router.post('/', isLoggedIn, async (req, res) => {
