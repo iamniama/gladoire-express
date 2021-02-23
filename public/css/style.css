@@ -13,14 +13,14 @@ html {
 }
 
 body {
-    background-color: rgba(57, 154, 207, 0.8);
+    background-color: rgba(65, 95, 107, 0.6);
     /*background-color: navajowhite;*/
     font-size: 2.5rem;
     background-size: cover;
     background-repeat: no-repeat;
     box-sizing: border-box;
     font-family: 'Shadows Into Light', cursive;
-    color: darkslategrey;
+    color: midnightblue;
     position: relative;
     min-height: 100%;
     height: 100%;
