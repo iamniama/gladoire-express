@@ -1,11 +1,11 @@
 
 
     <% if (typeof data.user != 'undefined') { %>
-        <div style="margin-bottom: 10px;">
-            See entries with: <a href="/entries/filtered/1">Energy Gain</a>&nbsp;&nbsp;&nbsp;
-            <a href="/entries/filtered/2">Energy Decrease</a>&nbsp;&nbsp;&nbsp;
-            <a href="/entries/filtered/3">Mood Improve</a>&nbsp;&nbsp;&nbsp;
-            <a href="/entries/filtered/4">Mood Decline</a>&nbsp;&nbsp;&nbsp;
+        <div style="margin-bottom: 10px; margin-left: 25px;">
+            See entries with: <a href="/entries/filtered/1" class="btn btn-primary btn-local">Energy Gain</a>&nbsp;&nbsp;&nbsp;
+            <a href="/entries/filtered/2" class="btn btn-primary btn-local">Energy Decrease</a>&nbsp;&nbsp;&nbsp;
+            <a href="/entries/filtered/3" class="btn btn-primary btn-local">Mood Improve</a>&nbsp;&nbsp;&nbsp;
+            <a href="/entries/filtered/4" class="btn btn-primary btn-local">Mood Decline</a>&nbsp;&nbsp;&nbsp;
         </div>
 
         <% data.items.forEach(function(entry){ %>
